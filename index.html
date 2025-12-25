@@ -117,30 +117,7 @@
 
     .about-grid{display:grid;grid-template-columns:200px 1fr;gap:18px;align-items:start}
     @media (max-width:720px){.about-grid{grid-template-columns:1fr}}
-    .headshot-wrap{
-      width:200px;
-      border-radius:22px;
-      border:1px solid rgba(255,255,255,.18);
-      background:rgba(255,255,255,.04);
-      box-shadow:0 18px 60px rgba(0,0,0,.35);
-      overflow:hidden;
-    }
-    .headshot{
-      width:100%;
-      height:260px;
-      object-fit:cover;
-      display:block;
-    }
-    .headshot-fallback{
-      width:100%;
-      height:260px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:18px;
-      color:rgba(238,243,255,.70);
-      font-size:.92rem;
-    }
+
 
     .tabs{margin-top:14px;display:flex;flex-wrap:wrap;gap:10px}
     .tab-btn{
@@ -270,15 +247,7 @@
 
           <div class="about-grid">
             <!-- Headshot with fallback -->
-            <div class="headshot-wrap" id="headshotWrap">
-              <img
-                class="headshot"
-                id="headshotImg"
-                src="SSP_216_2.jpeg"
-                alt="Professional headshot of Dr Rohit Mittal"
-                onerror="this.onerror=null; this.src='assets/SSP_216_2.jpeg';"
-              />
-            </div>
+
 
             <div>
               <p>
@@ -396,10 +365,7 @@
               <h3>FCARCSI <span class="tmeta">• College of Anaesthesiologists of Ireland</span></h3>
               <div class="tmeta">Anaesthetics</div>
             </div>
-            <div class="titem">
-              <h3>The Air Force School (TAFS), Subroto Park</h3>
-              <div class="tmeta">1991 – 1993</div>
-            </div>
+
           </div>
         </div>
       </div>
