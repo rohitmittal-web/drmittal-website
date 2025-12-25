@@ -164,6 +164,11 @@
       display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;
       color:rgba(238,243,255,.72);font-size:.92rem;
     }
+.specialist-list{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:14px}
+@media (max-width:768px){.specialist-list{grid-template-columns:1fr}}
+.specialist-item{margin-top:14px;padding:14px;border-radius:18px;border:1px solid rgb(255,255,255,.12);background:rgb(255,255,255,.05)}
+.specialist-item h4{margin:0 0 8px 0;color:var(--text)}
+.specialist-item p{margin:0;color:rgb(238,243,255,.78);font-size:.93rem;line-height:1.6}
   </style>
 </head>
 
@@ -258,42 +263,32 @@
               <div class="divider"></div>
               <div class="muted" style="margin-bottom:10px;"><b>Specialist interests</b>
 
-              <div class="tabs" role="tablist" aria-label="Specialist interests">
-                <button class="tab-btn" role="tab" id="tab-neuro" aria-controls="panel-neuro" aria-selected="true">Neuroanaesthesia</button>
-                <button class="tab-btn" role="tab" id="tab-spine" aria-controls="panel-spine" aria-selected="false">Spinal surgery</button>
-                <button class="tab-btn" role="tab" id="tab-intr" aria-controls="panel-intr" aria-selected="false">Interventional neuroradiology</button>
-                <button class="tab-btn" role="tab" id="tab-stroke" aria-controls="panel-stroke" aria-selected="false">Endovascular stroke treatment</button>
-                <button class="tab-btn" role="tab" id="tab-ortho" aria-controls="panel-ortho" aria-selected="false">Orthopaedic surgery</button>
-                    <button class="tab-btn" role="tab" id="tab-cosmeticbtn" aria-controls="panel-cosmetic" aria-selected="false">Cosmetic surgery</button>
-              </div>
-
-              <div class="tab-panel" role="tabpanel" id="panel-neuro" aria-labelledby="tab-neuro">
-                <b>Neuroanaesthesia</b>
-                <p class="tp">Anaesthetic care for neurosurgical and neuro-interventional procedures, with a focus on safety, physiology, and perioperative outcomes.</p>
-              </div>
-              <div class="tab-panel" role="tabpanel" id="panel-spine" aria-labelledby="tab-spine" hidden>
-                <b>Spinal surgery</b>
-                <p class="tp">Perioperative anaesthetic management for complex spine surgery, supporting enhanced recovery and individualised perioperative planning.</p>
-              </div>
-              <div class="tab-panel" role="tabpanel" id="panel-intr" aria-labelledby="tab-inr" hidden>
-                <b>Interventional neuroradiology</b>
-                <p class="tp">Anaesthesia for neuro-interventional radiology procedures, supporting stable conditions and optimised neurological care pathways.</p>
-              </div>
-              <div class="tab-panel" role="tabpanel" id="panel-stroke" aria-labelledby="tab-stroke" hidden>
-                <b>Endovascular stroke treatment</b>
-                <p class="tp">Anaesthetic support for endovascular treatment of stroke, emphasising timely workflow and safe physiological targets.</p>
-              </div>
-              <div class="tab-panel" role="tabpanel" id="panel-ortho" aria-labelledby="tab-ortho" hidden>
-                <b>Orthopaedic surgery</b>
-                <p class="tp">Anaesthesia for orthopaedic surgery (including arthroplasty), with attention to analgesia, mobilisation, and recovery.</p>
-                 <div class="tab-panel" role="tabpanel" id="panel-cosmetic" aria-labelledby="tab-cosmeticbtn" hidden>
-                     <b>Cosmetic surgery</b>
-                     <p class="tp">Perioperative anaesthetic management for cosmetic surgical procedures, supporting optimal comfort and recovery.</p>
-                    </div>
-              </div>
+<div class="specialist-list">
+            <div class="specialist-item">
+              <h4>Neuroanaesthesia</h4>
+              <p>Anaesthetic care for neurosurgical and neuro-interventional procedures, with a focus on safety, physiology, and perioperative outcomes.</p>
+            </div>
+            <div class="specialist-item">
+              <h4>Spinal surgery</h4>
+              <p>Perioperative anaesthetic management for complex spine surgery, supporting enhanced recovery and optimised outcomes.</p>
+            </div>
+            <div class="specialist-item">
+              <h4>Interventional neuroradiology</h4>
+              <p>Anaesthesia for neuro-interventional radiology procedures, supporting stable conditions and rapid recovery.</p>
+            </div>
+            <div class="specialist-item">
+              <h4>Endovascular stroke treatment</h4>
+              <p>Anaesthetic support for endovascular treatment of stroke, emphasising timely workflow and optimal neurological outcomes.</p>
+            </div>
+            <div class="specialist-item">
+              <h4>Orthopaedic surgery</h4>
+              <p>Anaesthesia for orthopaedic surgery (including arthroplasty), with attention to analgesia, mobility and rapid recovery.</p>
+            </div>
+            <div class="specialist-item">
+              <h4>Cosmetic surgery</h4>
+              <p>Perioperative anaesthetic management for cosmetic surgical procedures, supporting optimal patient experience and satisfaction.</p>
             </div>
           </div>
-
           <div class="divider"></div>
           <div class="disclaimer">
             This website is for professional information only and is not intended for urgent medical advice.
