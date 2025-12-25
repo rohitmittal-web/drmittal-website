@@ -3,23 +3,28 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Dr Rohit Mittal (MBBS, FRCA, FCARCSI) - Consultant Anaesthetist & Perioperative Care Specialist with a specialist interest in Neuroanaesthesia." />
-  <meta name="theme-color" content="#0b1220" />
-  <title>Dr Rohit Mittal, MBBS FRCA FCARCSI | Consultant Anaesthetist & Neuroanaesthesia</title>
+  <meta name="description" content="Dr Rohit Mittal, MBBS FRCA FCARCSI - Consultant Anaesthetist & Perioperative Care Specialist with a specialist interest in Neuroanaesthesia." />
+  <meta name="theme-color" content="#0b2a6f" />
+  <title>Dr Rohit Mittal, MBBS FRCA FCARCSI | Consultant Anaesthetist</title>
 
+  <!-- Ultra-minimal, modern “Option A” (Apple-clean) -->
   <style>
     :root{
-      --bg:#070c18;
-      --panel:#0f1730;
-      --panel2:#0b1328;
-      --text:#eef3ff;
-      --muted:#b8c4e6;
-      --line:rgba(255,255,255,.10);
-      --accent:#7bb3ff;
-      --accent2:#a6ffe0;
-      --shadow: 0 18px 70px rgba(0,0,0,.38);
+      --bg: #fbfbfd;                 /* Apple-like off-white */
+      --card: #ffffff;
+      --text: #0b1220;               /* charcoal */
+      --muted: #5f6b7a;
+      --line: rgba(15, 23, 42, .10);
+
+      --accent: #0b2a6f;             /* deep blue */
+      --accent-2: #2f6bff;           /* brighter blue for hover */
+      --accent-soft: rgba(11, 42, 111, .10);
+
       --radius: 18px;
-      --max: 1100px;
+      --shadow: 0 18px 60px rgba(2, 8, 20, .08);
+      --shadow-soft: 0 10px 35px rgba(2, 8, 20, .06);
+
+      --max: 1120px;
       --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
     }
 
@@ -29,22 +34,20 @@
       margin:0;
       font-family:var(--font);
       color:var(--text);
-      line-height:1.6;
       background:
-        radial-gradient(1200px 700px at 18% -10%, rgba(123,179,255,.24), transparent 60%),
-        radial-gradient(900px 600px at 92% 10%, rgba(166,255,224,.16), transparent 55%),
-        radial-gradient(900px 700px at 50% 120%, rgba(123,179,255,.10), transparent 55%),
+        radial-gradient(900px 500px at 18% -10%, rgba(47,107,255,.10), transparent 60%),
+        radial-gradient(900px 520px at 95% 0%, rgba(11,42,111,.08), transparent 55%),
         var(--bg);
+      line-height:1.6;
     }
-
     a{color:inherit}
-    .wrap{max-width:var(--max);margin:0 auto;padding:28px 18px 72px}
+    .wrap{max-width:var(--max);margin:0 auto;padding:28px 18px 80px}
 
-    /* Top bar */
+    /* Top nav */
     .nav{
       position:sticky; top:0; z-index:50;
-      backdrop-filter: blur(12px);
-      background: rgba(7,12,24,.62);
+      backdrop-filter: blur(10px);
+      background: rgba(251, 251, 253, .78);
       border-bottom: 1px solid var(--line);
     }
     .nav-inner{
@@ -54,26 +57,26 @@
       display:flex;
       align-items:center;
       justify-content:space-between;
-      gap:14px
+      gap:14px;
     }
     .brand{
       display:flex;
       flex-direction:column;
-      gap:2px;
-      min-width: 240px;
+      gap:4px;
+      min-width: 260px;
     }
     .brand .name{
-      font-weight:650;
-      letter-spacing:.2px;
       display:flex;
-      flex-wrap:wrap;
-      gap:8px;
       align-items:baseline;
+      gap:10px;
+      flex-wrap:wrap;
+      letter-spacing:-.2px;
     }
+    .brand .name strong{font-weight:750}
     .brand .postnom{
-      font-weight:500;
       font-size:.92rem;
       color:var(--muted);
+      font-weight:550;
       letter-spacing:.2px;
     }
     .brand .role{
@@ -86,22 +89,23 @@
       gap:8px;
       flex-wrap:wrap;
       justify-content:flex-end;
-      align-items:center
+      align-items:center;
     }
     .menu a{
       font-size:.95rem;
-      color:var(--muted);
       text-decoration:none;
+      color:var(--muted);
       padding:8px 10px;
       border-radius:12px;
       transition: background .15s ease, color .15s ease, transform .15s ease;
     }
     .menu a:hover{
-      background:rgba(255,255,255,.06);
-      color:var(--text);
+      background: rgba(11,42,111,.06);
+      color: var(--text);
       transform: translateY(-1px);
     }
 
+    /* Buttons */
     .btn{
       display:inline-flex;
       align-items:center;
@@ -109,140 +113,191 @@
       gap:10px;
       padding:12px 14px;
       border-radius:14px;
-      border:1px solid rgba(123,179,255,.38);
-      background: linear-gradient(180deg, rgba(123,179,255,.22), rgba(123,179,255,.08));
-      box-shadow: 0 10px 30px rgba(0,0,0,.22);
+      border:1px solid rgba(11,42,111,.16);
+      background: linear-gradient(180deg, rgba(11,42,111,.10), rgba(11,42,111,.06));
+      color: var(--accent);
       text-decoration:none;
-      transition: transform .15s ease, filter .15s ease;
+      box-shadow: var(--shadow-soft);
+      transition: transform .15s ease, background .15s ease, border-color .15s ease;
       white-space:nowrap;
     }
-    .btn:hover{transform: translateY(-1px); filter: brightness(1.05)}
-    .btn.secondary{
-      border:1px solid rgba(255,255,255,.16);
-      background: rgba(255,255,255,.06);
+    .btn:hover{
+      transform: translateY(-1px);
+      border-color: rgba(11,42,111,.24);
+      background: linear-gradient(180deg, rgba(47,107,255,.14), rgba(11,42,111,.06));
+    }
+    .btn.primary{
+      border-color: rgba(11,42,111,.25);
+      background: linear-gradient(180deg, rgba(11,42,111,1), rgba(11,42,111,.92));
+      color:#fff;
+      box-shadow: 0 16px 45px rgba(11,42,111,.22);
+    }
+    .btn.primary:hover{
+      background: linear-gradient(180deg, rgba(47,107,255,1), rgba(11,42,111,.95));
     }
 
-    /* Cards */
-    .card{
-      background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.03));
-      border:1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-
-    /* Hero */
+    /* Layout */
     .hero{
+      margin-top:26px;
       display:grid;
-      grid-template-columns: 1.25fr .75fr;
+      grid-template-columns: 1.15fr .85fr;
       gap:18px;
       align-items:stretch;
-      margin-top:26px
     }
-    @media (max-width: 940px){
+    @media (max-width: 920px){
       .hero{grid-template-columns:1fr}
       .brand{min-width:unset}
+    }
+
+    .card{
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
     }
 
     .hero-left{padding:28px}
     .kicker{
       display:inline-flex;
-      gap:10px;
       align-items:center;
+      gap:10px;
       color:var(--muted);
-      margin-bottom:12px;
       font-size:.95rem;
+      margin-bottom:12px;
     }
-    .dot{width:8px;height:8px;border-radius:50%;background:var(--accent)}
+    .dot{
+      width:8px;height:8px;border-radius:50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 6px rgba(11,42,111,.10);
+    }
+
     h1{
-      margin:0 0 10px;
-      font-size:clamp(2.0rem,3.3vw,2.8rem);
-      letter-spacing:-.6px;
-      line-height:1.15;
+      margin:0 0 12px;
+      font-size: clamp(2.0rem, 3.1vw, 2.8rem);
+      letter-spacing: -0.8px;
+      line-height: 1.12;
     }
     .subtitle{
       color:var(--muted);
-      font-size:1.06rem;
-      max-width:76ch;
+      font-size: 1.05rem;
+      max-width: 80ch;
     }
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
 
-    .chips{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      margin:18px 0 18px
+    /* Stat chips */
+    .stats{
+      margin-top:20px;
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:12px;
     }
-    .chip{
-      font-size:.92rem;
-      color:var(--muted);
-      padding:8px 10px;
-      border-radius:999px;
-      border:1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.04);
+    @media (max-width: 920px){ .stats{grid-template-columns:1fr} }
+    .stat{
+      padding:14px 14px;
+      border-radius: 16px;
+      border: 1px solid rgba(11,42,111,.10);
+      background: linear-gradient(180deg, rgba(47,107,255,.05), rgba(11,42,111,.03));
     }
+    .stat b{display:block; font-size: .95rem; letter-spacing:-.2px}
+    .stat span{display:block; margin-top:6px; color:var(--muted); font-size:.95rem}
 
-    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
-
+    /* Right column cards */
     .hero-right{padding:18px;display:flex;flex-direction:column;gap:12px}
-    .fact{
+    .panel{
       padding:14px 14px;
       border-radius:16px;
-      border:1px solid rgba(255,255,255,.12);
-      background: rgba(15,23,48,.38);
+      border:1px solid var(--line);
+      background: linear-gradient(180deg, rgba(11,42,111,.03), rgba(47,107,255,.02));
     }
-    .fact b{display:block;margin-bottom:6px}
-    .fact span{color:var(--muted);font-size:.95rem}
+    .panel b{display:block;margin-bottom:6px;letter-spacing:-.2px}
+    .panel .ptext{color:var(--muted);font-size:.95rem}
 
     /* Sections */
-    section{margin-top:22px}
+    section{margin-top:18px}
     .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
-    .col-12{grid-column: span 12}
-    @media (max-width: 940px){ .col-12{grid-column:span 12} }
+    .col-12{grid-column:span 12}
+    .col-7{grid-column:span 7}
+    .col-5{grid-column:span 5}
+    @media (max-width: 920px){ .col-7,.col-5{grid-column:span 12} }
 
-    .section-card{padding:20px}
-    h2{margin:0 0 10px;font-size:1.30rem;letter-spacing:-.2px}
-    h3{margin:0 0 6px;font-size:1.06rem}
+    .section-card{padding:22px}
+    h2{margin:0 0 10px;font-size:1.25rem;letter-spacing:-.3px}
+    h3{margin:0 0 6px;font-size:1.03rem;letter-spacing:-.2px}
     p{margin:10px 0;color:var(--muted)}
-    ul{margin:10px 0 0;padding-left:18px;color:var(--muted)}
-    li{margin:6px 0}
-
     .divider{height:1px;background:var(--line);margin:16px 0}
-    .small{font-size:.92rem;color:var(--muted)}
-    .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;}
 
-    .tagrow{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
-    .tag{
-      font-size:.85rem;
-      color:var(--muted);
-      padding:6px 10px;
-      border-radius:999px;
-      border:1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.03);
-    }
-
-    .timeline{display:flex;flex-direction:column;gap:12px;margin-top:10px}
+    /* Timeline */
+    .timeline{display:flex;flex-direction:column;gap:12px;margin-top:12px}
     .titem{
       padding:14px;
       border-radius:16px;
-      border:1px solid rgba(255,255,255,.12);
-      background: rgba(15,23,48,.28);
+      border:1px solid var(--line);
+      background: #fff;
+      box-shadow: 0 10px 26px rgba(2,8,20,.05);
     }
     .tmeta{color:var(--muted);font-size:.93rem}
+    .tbadge{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:6px 10px; border-radius:999px;
+      border:1px solid rgba(11,42,111,.14);
+      background: rgba(11,42,111,.05);
+      color: var(--accent);
+      font-size:.85rem;
+      font-weight:600;
+      margin-top:10px;
+    }
 
-    .footer{
-      margin-top:24px;
-      padding-top:18px;
-      border-top:1px solid var(--line);
+    /* Tags */
+    .tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+    .tag{
+      padding:8px 12px;
+      border-radius:999px;
+      border:1px solid rgba(15,23,42,.10);
+      background: rgba(11,42,111,.04);
+      color: #263043;
+      font-size:.92rem;
+    }
+    .tag.emph{
+      border-color: rgba(11,42,111,.18);
+      background: rgba(11,42,111,.08);
+      color: var(--accent);
+      font-weight:650;
+    }
+
+    /* Contact */
+    .contact-card{
+      display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;
+      padding:18px;
+      border-radius: 18px;
+      border: 1px solid rgba(11,42,111,.16);
+      background: linear-gradient(180deg, rgba(47,107,255,.08), rgba(11,42,111,.04));
+    }
+    .email{
+      font-size:1.05rem;
+      font-weight:700;
+      letter-spacing:-.2px;
+      color: var(--accent);
+    }
+    .small{
       color:var(--muted);
       font-size:.92rem;
+    }
+
+    /* Footer */
+    .footer{
+      margin-top:22px;
+      padding-top:18px;
+      border-top:1px solid var(--line);
       display:flex;
       flex-wrap:wrap;
       gap:10px;
       justify-content:space-between;
       align-items:center;
+      color:var(--muted);
+      font-size:.92rem;
     }
 
-    /* Nice selection */
-    ::selection{background:rgba(123,179,255,.28)}
+    ::selection{background: rgba(47,107,255,.18)}
   </style>
 </head>
 
@@ -251,7 +306,7 @@
     <div class="nav-inner">
       <div class="brand">
         <div class="name">
-          <span>Dr Rohit Mittal</span>
+          <strong>Dr Rohit Mittal</strong>
           <span class="postnom">MBBS, FRCA, FCARCSI</span>
         </div>
         <div class="role">Consultant Anaesthetist &amp; Perioperative Care Specialist</div>
@@ -263,7 +318,7 @@
         <a href="#interests">Interests</a>
         <a href="#education">Education</a>
         <a href="#skills">Skills</a>
-        <a class="btn secondary" href="#contact">Contact</a>
+        <a class="btn" href="#contact">Contact</a>
       </div>
     </div>
   </div>
@@ -273,25 +328,30 @@
     <div class="hero">
       <div class="card hero-left">
         <div class="kicker"><span class="dot"></span><span>Professional profile</span></div>
-        <h1>Consultant Anaesthetist &amp; Perioperative Care Specialist</h1>
+        <h1>Consultant Anaesthetist with a specialist interest in Neuroanaesthesia</h1>
         <div class="subtitle">
-          Specialist interest in <b>Neuroanaesthesia</b>, with a focus on high-quality, patient-centred perioperative care,
-          personalised anaesthesia protocols, and enhanced surgical recovery through perioperative prehabilitation.
-          Experience in healthcare consulting and medical devices to support wider system improvement.
-        </div>
-
-        <div class="chips">
-          <div class="chip">Neuroanaesthesia</div>
-          <div class="chip">Perioperative Care</div>
-          <div class="chip">Personalised Anaesthesia</div>
-          <div class="chip">Prehabilitation</div>
-          <div class="chip">Healthcare Consulting</div>
-          <div class="chip">Medical Devices</div>
+          Delivering high-quality, patient-centred perioperative care with a focus on personalised anaesthesia protocols,
+          perioperative prehabilitation, and enhanced recovery. Experience in healthcare consulting and medical devices to support wider system improvement.
         </div>
 
         <div class="actions">
+          <a class="btn primary" href="#contact">Email</a>
           <a class="btn" href="#experience">View experience</a>
-          <a class="btn secondary" href="#contact">Contact</a>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <b>Current role</b>
+            <span>Consultant Neuroanaesthetist (UHCW NHS Trust)</span>
+          </div>
+          <div class="stat">
+            <b>Academic</b>
+            <span>Honorary Lecturer (Warwick Medical School)</span>
+          </div>
+          <div class="stat">
+            <b>Education & leadership</b>
+            <span>Course Director (Coventry Neuro Simulation)</span>
+          </div>
         </div>
 
         <div class="divider"></div>
@@ -302,52 +362,62 @@
       </div>
 
       <div class="card hero-right">
-        <div class="fact">
-          <b>Current roles</b>
-          <span>
+        <div class="panel">
+          <b>Core focus</b>
+          <div class="ptext">Neuroanaesthesia • Perioperative care • Personalised anaesthesia protocols • Prehabilitation</div>
+        </div>
+        <div class="panel">
+          <b>Current appointments</b>
+          <div class="ptext">
             Consultant Neuroanaesthetist, UHCW NHS Trust (Apr 2021–Present)<br/>
             Honorary Lecturer, Warwick Medical School (Apr 2025–Present)
-          </span>
+          </div>
         </div>
-        <div class="fact">
-          <b>Leadership / education</b>
-          <span>
-            Course Director, Coventry Neuro Simulation (Apr 2021–Present)<br/>
-            Anaesthetic Associate Lead Tutor (Oct 2021–May 2025)
-          </span>
-        </div>
-        <div class="fact">
+        <div class="panel">
           <b>Links</b>
-          <span>
+          <div class="ptext">
             <a href="https://www.mededcoventry.org/Courses/Anaesthetics/AANE" target="_blank" rel="noopener">Coventry Neuro Simulation</a>
             &nbsp;•&nbsp;
             <a href="https://uk.linkedin.com/in/rohit-mittal-65571178" target="_blank" rel="noopener">LinkedIn</a>
-          </span>
+          </div>
         </div>
-        <div class="fact">
+        <div class="panel">
           <b>Contact</b>
-          <span><a href="mailto:contact@drmittal.co.uk">contact@drmittal.co.uk</a></span>
+          <div class="ptext"><a class="email" href="mailto:contact@drmittal.co.uk">contact@drmittal.co.uk</a></div>
         </div>
       </div>
     </div>
 
-    <!-- ABOUT -->
+    <!-- ABOUT + QUICK SUMMARY -->
     <section id="about" class="grid">
-      <div class="card section-card col-12">
+      <div class="card section-card col-7">
         <h2>About</h2>
-        <p class="mono">Consultant Anaesthetist &amp; Perioperative Care Specialist | Neuroanaesthesia | Healthcare Consulting</p>
         <p>
           Highly experienced Consultant Anaesthetist committed to delivering high-quality, patient-centred perioperative care.
           Specialising in Neuroanaesthesia and the implementation of personalised anaesthesia protocols to optimise patient outcomes.
           Dedicated to enhancing surgical recovery through perioperative prehabilitation and leveraging expertise in healthcare consulting and medical devices
           to drive sector-wide improvements.
         </p>
-        <div class="tagrow">
-          <span class="tag">Neuroanaesthesia</span>
-          <span class="tag">Perioperative Care</span>
+        <div class="tags">
+          <span class="tag emph">Neuroanaesthesia</span>
+          <span class="tag">Perioperative care</span>
+          <span class="tag">Personalised anaesthesia</span>
           <span class="tag">Prehabilitation</span>
-          <span class="tag">Medical Education</span>
-          <span class="tag">Healthcare Leadership</span>
+          <span class="tag">Healthcare consulting</span>
+          <span class="tag">Medical devices</span>
+        </div>
+      </div>
+
+      <div class="card section-card col-5">
+        <h2>Highlights</h2>
+        <p class="small" style="margin-top:0">
+          A concise overview of key roles and responsibilities.
+        </p>
+        <div class="divider"></div>
+        <div class="small">
+          <b>Education leadership:</b> Anaesthetic Associate Lead Tutor (Oct 2021–May 2025)<br/>
+          <b>Course leadership:</b> Course Director, Coventry Neuro Simulation (Apr 2021–Present)<br/>
+          <b>Teaching:</b> Honorary Lecturer, Warwick Medical School (Apr 2025–Present)
         </div>
       </div>
     </section>
@@ -361,58 +431,62 @@
           <div class="titem">
             <h3>Honorary Lecturer <span class="tmeta">• Warwick Medical School • Part-time</span></h3>
             <div class="tmeta">Apr 2025 – Present</div>
+            <div class="tbadge">Medical education</div>
           </div>
 
           <div class="titem">
             <h3>Consultant Neuroanaesthetist <span class="tmeta">• University Hospitals Coventry &amp; Warwickshire (UHCW) NHS Trust • Full-time</span></h3>
             <div class="tmeta">Apr 2021 – Present • Coventry, England, United Kingdom</div>
-            <div class="tagrow"><span class="tag">Healthcare Leadership</span></div>
+            <div class="tbadge">Healthcare leadership</div>
           </div>
 
           <div class="titem">
             <h3>Anaesthetic Associate Lead Tutor <span class="tmeta">• UHCW NHS Trust • Contract</span></h3>
             <div class="tmeta">Oct 2021 – May 2025 • United Kingdom</div>
-            <div class="tagrow"><span class="tag">Healthcare Leadership</span></div>
+            <div class="tbadge">Education leadership</div>
           </div>
 
           <div class="titem">
             <h3>Course Director <span class="tmeta">• Coventry Neuro Simulation</span></h3>
             <div class="tmeta">Apr 2021 – Present • Coventry, England, United Kingdom</div>
-            <div class="small">Course link: <a href="https://www.mededcoventry.org/Courses/Anaesthetics/AANE" target="_blank" rel="noopener">mededcoventry.org/Courses/Anaesthetics/AANE</a></div>
-            <div class="tagrow"><span class="tag">Healthcare Leadership</span><span class="tag">Clinical Simulation</span></div>
+            <p class="small" style="margin:10px 0 0">
+              Course link:
+              <a href="https://www.mededcoventry.org/Courses/Anaesthetics/AANE" target="_blank" rel="noopener">mededcoventry.org/Courses/Anaesthetics/AANE</a>
+            </p>
+            <div class="tbadge">Clinical simulation</div>
           </div>
 
           <div class="titem">
             <h3>Professional Development Tutor <span class="tmeta">• Keele University</span></h3>
             <div class="tmeta">Feb 2019 – Apr 2021 • United Kingdom</div>
-            <div class="small">Professional Development Tutor at Keele Medical School (Years 2–5)</div>
-            <div class="tagrow"><span class="tag">Healthcare Leadership</span><span class="tag">Medical Education</span></div>
+            <p class="small" style="margin:10px 0 0">Professional Development Tutor at Keele Medical School (Years 2–5)</p>
+            <div class="tbadge">Medical education</div>
           </div>
 
           <div class="titem">
             <h3>Clinical Tutor (Procedural Skills) <span class="tmeta">• Keele University</span></h3>
             <div class="tmeta">Jan 2016 – Jan 2019 • United Kingdom</div>
-            <div class="tagrow"><span class="tag">Medical Education</span></div>
+            <div class="tbadge">Teaching</div>
           </div>
 
           <div class="titem">
             <h3>Consultant Neuro Anaesthetist <span class="tmeta">• University Hospitals of North Midlands NHS Trust • Full-time</span></h3>
             <div class="tmeta">Nov 2013 – Apr 2021</div>
-            <div class="small">
+            <p class="small" style="margin:10px 0 0">
               Interests included Neuroanaesthesia, Spinal Surgery, Interventional Neuroradiology, Endovascular Treatment of Stroke, Orthopaedic Surgery.
-            </div>
+            </p>
           </div>
 
           <div class="titem">
             <h3>Consultant Anaesthetist <span class="tmeta">• ROH, Birmingham, United Kingdom</span></h3>
             <div class="tmeta">May 2013 – Nov 2013</div>
-            <div class="small">Complex spine surgery, arthroplasty</div>
+            <p class="small" style="margin:10px 0 0">Complex spine surgery, arthroplasty</p>
           </div>
 
           <div class="titem">
             <h3>Specialist Registrar (Anaesthetics) <span class="tmeta">• NHS</span></h3>
             <div class="tmeta">Aug 2007 – May 2013</div>
-            <div class="small">Various hospitals in Oxford, North East, and West Midlands</div>
+            <p class="small" style="margin:10px 0 0">Various hospitals in Oxford, North East, and West Midlands</p>
           </div>
         </div>
       </div>
@@ -422,13 +496,13 @@
     <section id="interests" class="grid">
       <div class="card section-card col-12">
         <h2>Clinical interests</h2>
-        <ul>
-          <li>Neuroanaesthesia</li>
-          <li>Spinal surgery</li>
-          <li>Interventional neuroradiology</li>
-          <li>Endovascular treatment of stroke</li>
-          <li>Orthopaedic surgery</li>
-        </ul>
+        <div class="tags">
+          <span class="tag emph">Neuroanaesthesia</span>
+          <span class="tag">Spinal surgery</span>
+          <span class="tag">Interventional neuroradiology</span>
+          <span class="tag">Endovascular treatment of stroke</span>
+          <span class="tag">Orthopaedic surgery</span>
+        </div>
       </div>
     </section>
 
@@ -461,21 +535,20 @@
     <section id="skills" class="grid">
       <div class="card section-card col-12">
         <h2>Skills</h2>
-        <p class="small">Selected skills (as listed on LinkedIn):</p>
-        <div class="tagrow">
-          <span class="tag">Healthcare Leadership</span>
+        <div class="tags" style="margin-top:10px">
+          <span class="tag emph">Healthcare leadership</span>
           <span class="tag">Anaesthetics</span>
           <span class="tag">ICU</span>
-          <span class="tag">Emergency Medicine</span>
-          <span class="tag">Critical Care</span>
-          <span class="tag">Airway Management</span>
-          <span class="tag">Patient Safety</span>
-          <span class="tag">Medical Education</span>
-          <span class="tag">Healthcare Consulting</span>
-          <span class="tag">Medical Devices</span>
-          <span class="tag">Clinical Simulation</span>
-          <span class="tag">Public Health</span>
-          <span class="tag">Clinical Research</span>
+          <span class="tag">Emergency medicine</span>
+          <span class="tag">Critical care</span>
+          <span class="tag">Airway management</span>
+          <span class="tag">Patient safety</span>
+          <span class="tag">Medical education</span>
+          <span class="tag">Healthcare consulting</span>
+          <span class="tag">Medical devices</span>
+          <span class="tag">Clinical simulation</span>
+          <span class="tag">Public health</span>
+          <span class="tag">Clinical research</span>
           <span class="tag">Healthcare IT</span>
         </div>
       </div>
@@ -485,10 +558,14 @@
     <section id="contact" class="grid">
       <div class="card section-card col-12">
         <h2>Contact</h2>
-        <p>For professional enquiries, please email:</p>
-        <ul>
-          <li><b>Email:</b> <a href="mailto:contact@drmittal.co.uk">contact@drmittal.co.uk</a></li>
-        </ul>
+
+        <div class="contact-card">
+          <div>
+            <div class="small">For professional enquiries</div>
+            <div class="email"><a href="mailto:contact@drmittal.co.uk">contact@drmittal.co.uk</a></div>
+          </div>
+          <a class="btn primary" href="mailto:contact@drmittal.co.uk">Email</a>
+        </div>
 
         <div class="divider"></div>
         <div class="small">
@@ -500,7 +577,7 @@
 
     <div class="footer">
       <span>© <span id="y"></span> Dr Rohit Mittal</span>
-      <span class="small">MBBS, FRCA, FCARCSI</span>
+      <span>MBBS, FRCA, FCARCSI</span>
     </div>
   </div>
 
