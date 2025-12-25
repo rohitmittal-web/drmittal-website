@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Dr Rohit Mittal - Consultant Anaesthetist & Perioperative Care Specialist with a specialist interest in Neuroanaesthesia. Professional profile, experience, interests, and contact." />
+  <title>Dr Rohit Mittal | Consultant Anaesthetist & Neuroanaesthesia</title>
+
+  <style>
+    :root{
+      --bg:#0b1220; --text:#eaf0ff; --muted:#b9c4e2;
+      --line:rgba(255,255,255,.12); --accent:#77b6ff; --accent2:#a7ffdf;
+      --shadow: 0 20px 70px rgba(0,0,0,.35);
+      --radius: 18px;
+      --max: 1080px;
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;font-family:var(--font);
+      background:
+        radial-gradient(1200px 700px at 20% -10%, rgba(119,182,255,.25), transparent 60%),
+        radial-gradient(900px 600px at 90% 10%, rgba(167,255,223,.18), transparent 55%),
+        var(--bg);
+      color:var(--text); line-height:1.55;
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max);margin:0 auto;padding:28px 18px 70px}
+    .nav{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(10px);
+      background: rgba(11,18,32,.62);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-inner{
+      max-width:var(--max);margin:0 auto;padding:14px 18px;
+      display:flex;align-items:center;justify-content:space-between;gap:14px
+    }
+    .brand{display:flex;flex-direction:column;gap:2px}
+    .brand b{letter-spacing:.2px}
+    .brand span{font-size:.92rem;color:var(--muted)}
+    .menu{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end;align-items:center}
+    .menu a{font-size:.95rem;color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:12px}
+    .menu a:hover{background:rgba(255,255,255,.06);color:var(--text)}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      padding:12px 14px;border-radius:14px;border:1px solid rgba(119,182,255,.35);
+      background: linear-gradient(180deg, rgba(119,182,255,.22), rgba(119,182,255,.08));
+      box-shadow: 0 10px 30px rgba(0,0,0,.22);
+      text-decoration:none;
+      transition: transform .15s ease;
+      white-space:nowrap;
+    }
+    .btn:hover{transform: translateY(-1px)}
+    .btn.secondary{
+      border:1px solid rgba(255,255,255,.16);
+      background: rgba(255,255,255,.06);
+    }
+    .hero{display:grid;grid-template-columns: 1.2fr .8fr;gap:18px;align-items:stretch;margin-top:26px}
+    @media (max-width: 920px){ .hero{grid-template-columns:1fr} }
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border:1px solid var(--line); border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .hero-left{padding:26px}
+    h1{margin:0 0 10px;font-size:clamp(1.9rem,3.2vw,2.7rem);letter-spacing:-.4px}
+    .subtitle{color:var(--muted);font-size:1.05rem;max-width:72ch}
+    .chips{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 18px}
+    .chip{
+      font-size:.92rem;color:var(--muted);
+      padding:8px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.04);
+    }
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+    .hero-right{padding:18px;display:flex;flex-direction:column;gap:12px}
+    .fact{padding:14px 14px;border-radius:16px;border:1px solid rgba(255,255,255,.12);background: rgba(15,26,48,.45)}
+    .fact b{display:block;margin-bottom:6px}
+    .fact span{color:var(--muted);font-size:.95rem}
+    section{margin-top:22px}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
+    .col-12{grid-column: span 12}
+    @media (max-width: 920px){ .col-12{grid-column:span 12} }
+    .section-card{padding:18px}
+    h2{margin:0 0 10px;font-size:1.28rem}
+    h3{margin:0 0 6px;font-size:1.06rem}
+    p{margin:10px 0;color:var(--muted)}
+    ul{margin:10px 0 0;padding-left:18px;color:var(--muted)}
+    li{margin:6px 0}
+    .divider{height:1px;background:var(--line);margin:14px 0}
+    .small{font-size:.92rem;color:var(--muted)}
+    .kicker{display:inline-flex;gap:10px;align-items:center;color:var(--muted);margin-bottom:10px}
+    .dot{width:8px;height:8px;border-radius:50%;background:var(--accent)}
+    .tagrow{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .tag{
+      font-size:.85rem;color:var(--muted);
+      padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.03);
+    }
+    .timeline{display:flex;flex-direction:column;gap:12px;margin-top:10px}
+    .titem{
+      padding:14px;border-radius:16px;border:1px solid rgba(255,255,255,.12);
+      background: rgba(15,26,48,.35);
+    }
+    .tmeta{color:var(--muted);font-size:.93rem}
+    .footer{margin-top:24px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:.92rem}
+    .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;}
+  </style>
+</head>
+
+<body>
+  <div class="nav">
+    <div class="nav-inner">
+      <div class="brand">
+        <b>Dr Rohit Mittal</b>
+        <span>Consultant Anaesthetist & Perioperative Care Specialist</span>
+      </div>
+      <div class="menu">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#interests">Interests</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a class="btn secondary" href="#contact">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="hero">
+      <div class="card hero-left">
+        <div class="kicker"><span class="dot"></span><span>Professional profile</span></div>
+        <h1>Dr Rohit Mittal</h1>
+        <div class="subtitle">
+          Consultant Anaesthetist &amp; Perioperative Care Specialist with a specialist interest in <b>Neuroanaesthesia</b>.
+          Focused on high-quality, patient-centred perioperative care, personalised anaesthesia protocols, and enhanced recovery through perioperative prehabilitation.
+          Experienced in healthcare consulting and medical devices to support wider system improvement.
+        </div>
+
+        <div class="chips">
+          <div class="chip">Neuroanaesthesia</div>
+          <div class="chip">Perioperative care</div>
+          <div class="chip">Personalised anaesthesia protocols</div>
+          <div class="chip">Prehabilitation</div>
+          <div class="chip">Healthcare consulting</div>
+          <div class="chip">Medical devices</div>
+        </div>
+
+        <div class="actions">
+          <a class="btn" href="#experience">View experience</a>
+          <a class="btn secondary" href="#contact">Contact</a>
+        </div>
+
+        <div class="divider"></div>
+        <div class="small">
+          This website is for professional information only. It is not intended for urgent medical advice.
+          In an emergency, contact local emergency services.
+        </div>
+      </div>
+
+      <div class="card hero-right">
+        <div class="fact">
+          <b>Current roles</b>
+          <span>
+            Consultant Neuroanaesthetist, UHCW NHS Trust (Apr 2021–Present)<br/>
+            Honorary Lecturer, Warwick Medical School (Apr 2025–Present)
+          </span>
+        </div>
+        <div class="fact">
+          <b>Leadership / education</b>
+          <span>
+            Course Director, Coventry Neuro Simulation (Apr 2021–Present)<br/>
+            Anaesthetic Associate Lead Tutor (Oct 2021–May 2025)
+          </span>
+        </div>
+        <div class="fact">
+          <b>Links</b>
+          <span>
+            <a href="https://uk.linkedin.com/in/rohit-mittal-65571178" target="_blank" rel="noopener">LinkedIn</a>
+            &nbsp;•&nbsp;
+            <a href="https://www.mededcoventry.org/Courses/Anaesthetics/AANE" target="_blank" rel="noopener">Coventry Neuro Simulation</a>
+          </span>
+        </div>
+        <div class="fact">
+          <b>Location</b>
+          <span>United Kingdom</span>
+        </div>
+      </div>
+    </div>
+
+    <section id="about" class="grid">
+      <div class="card section-card col-12">
+        <h2>About</h2>
+        <p class="mono">Consultant Anaesthetist &amp; Perioperative Care Specialist | Neuroanaesthesia | Healthcare Consulting</p>
+        <p>
+          Highly experienced Consultant Anaesthetist committed to delivering high-quality, patient-centred perioperative care.
+          Specialising in Neuroanaesthesia and the implementation of personalised anaesthesia protocols to optimise patient outcomes.
+          Dedicated to enhancing surgical recovery through perioperative prehabilitation and leveraging expertise in healthcare consulting and medical devices
+          to drive sector-wide improvements.
+        </p>
+        <div class="tagrow">
+          <span class="tag">Neuroanaesthesia</span>
+          <span class="tag">Perioperative Care</span>
+          <span class="tag">Prehabilitation</span>
+          <span class="tag">Medical Education</span>
+          <span class="tag">Healthcare Leadership</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="grid">
+      <div class="card section-card col-12">
+        <h2>Experience</h2>
+        <div class="timeline">
+          <div class="titem">
+            <h3>Honorary Lecturer <span class="tmeta">• Warwick Medical School • Part-time</span></h3>
+            <div class="tmeta">Apr 2025 – Present</div>
+          </div>
+
+          <div class="titem">
+            <h3>Consultant Neuroanaesthetist <span class="tmeta">• University Hospitals Coventry and Warwickshire (UHCW) NHS Trust • Full-time</span></h3>
+            <div class="tmeta">Apr 2021 – Present • Coventry, England, United Kingdom</div>
+            <div class="tagrow"><span class="tag">Healthcare Leadership</span></div>
+          </div>
+
+          <div class="titem">
+            <h3>Anaesthetic Associate Lead Tutor <span class="tmeta">• UHCW NHS Trust • Contract</span></h3>
+            <div class="tmeta">Oct 2021 – May 2025 • United Kingdom</div>
+            <div class="tagrow"><span class="tag">Healthcare Leadership</span></div>
+          </div>
+
+          <div class="titem">
+            <h3>Course Director <span class="tmeta">• Coventry Neuro Simulation</span></h3>
+            <div class="tmeta">Apr 2021 – Present • Coventry, England, United Kingdom</div>
+            <div class="small">Course link: <a href="https://www.mededcoventry.org/Courses/Anaesthetics/AANE" target="_blank" rel="noopener">mededcoventry.org/Courses/Anaesthetics/AANE</a></div>
+            <div class="tagrow"><span class="tag">Healthcare Leadership</span><span class="tag">Clinical Simulation</span></div>
+          </div>
+
+          <div class="titem">
+            <h3>Professional Development Tutor <span class="tmeta">• Keele University</span></h3>
+            <div class="tmeta">Feb 2019 – Apr 2021 • United Kingdom</div>
+            <div class="small">Professional Development Tutor at Keele Medical School (Years 2–5)</div>
+            <div class="tagrow"><span class="tag">Healthcare Leadership</span><span class="tag">Medical Education</span></div>
+          </div>
+
+          <div class="titem">
+            <h3>Clinical Tutor (Procedural Skills) <span class="tmeta">• Keele University</span></h3>
+            <div class="tmeta">Jan 2016 – Jan 2019 • United Kingdom</div>
+            <div class="tagrow"><span class="tag">Medical Education</span></div>
+          </div>
+
+          <div class="titem">
+            <h3>Consultant Neuro Anaesthetist <span class="tmeta">• University Hospitals of North Midlands NHS Trust • Full-time</span></h3>
+            <div class="tmeta">Nov 2013 – Apr 2021</div>
+            <div class="small">
+              Interests included Neuroanaesthesia, Spinal Surgery, Interventional Neuroradiology, Endovascular Treatment of Stroke, Orthopaedic Surgery.
+            </div>
+          </div>
+
+          <div class="titem">
+            <h3>Consultant Anaesthetist <span class="tmeta">• ROH, Birmingham, United Kingdom</span></h3>
+            <div class="tmeta">May 2013 – Nov 2013</div>
+            <div class="small">Complex spine surgery, arthroplasty</div>
+          </div>
+
+          <div class="titem">
+            <h3>Specialist Registrar (Anaesthetics) <span class="tmeta">• NHS</span></h3>
+            <div class="tmeta">Aug 2007 – May 2013</div>
+            <div class="small">Various hospitals in Oxford, North East, and West Midlands</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="interests" class="grid">
+      <div class="card section-card col-12">
+        <h2>Clinical interests</h2>
+        <ul>
+          <li>Neuroanaesthesia</li>
+          <li>Spinal surgery</li>
+          <li>Interventional neuroradiology</li>
+          <li>Endovascular treatment of stroke</li>
+          <li>Orthopaedic surgery</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="education" class="grid">
+      <div class="card section-card col-12">
+        <h2>Education</h2>
+        <div class="timeline">
+          <div class="titem">
+            <h3>FRCA <span class="tmeta">• Royal College of Anaesthetists, London</span></h3>
+            <div class="tmeta">Anaesthetics</div>
+          </div>
+          <div class="titem">
+            <h3>MBBS <span class="tmeta">• Bangalore University</span></h3>
+            <div class="tmeta">1994 – 1999</div>
+          </div>
+          <div class="titem">
+            <h3>FCARCSI <span class="tmeta">• College of Anaesthesiologists of Ireland</span></h3>
+            <div class="tmeta">Anaesthetics</div>
+          </div>
+          <div class="titem">
+            <h3>The Air Force School (TAFS), Subroto Park</h3>
+            <div class="tmeta">1991 – 1993</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="grid">
+      <div class="card section-card col-12">
+        <h2>Skills</h2>
+        <p class="small">Selected skills (as listed on LinkedIn):</p>
+        <div class="tagrow">
+          <span class="tag">Healthcare Leadership</span>
+          <span class="tag">Anaesthetics</span>
+          <span class="tag">ICU</span>
+          <span class="tag">Emergency Medicine</span>
+          <span class="tag">Critical Care</span>
+          <span class="tag">Airway Management</span>
+          <span class="tag">Patient Safety</span>
+          <span class="tag">Medical Education</span>
+          <span class="tag">Healthcare Consulting</span>
+          <span class="tag">Medical Devices</span>
+          <span class="tag">Clinical Simulation</span>
+          <span class="tag">Public Health</span>
+          <span class="tag">Clinical Research</span>
+          <span class="tag">Healthcare IT</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="grid">
+      <div class="card section-card col-12">
+        <h2>Contact</h2>
+        <p>
+          For professional enquiries, please connect via LinkedIn or the relevant institutional channels.
+          This website is not monitored for clinical queries.
+        </p>
+        <ul>
+          <li><b>LinkedIn:</b> <a href="https://uk.linkedin.com/in/rohit-mittal-65571178" target="_blank" rel="noopener">linkedin.com/in/rohit-mittal-65571178</a></li>
+          <li><b>Coventry Neuro Simulation course:</b> <a href="https://www.mededcoventry.org/Courses/Anaesthetics/AANE" target="_blank" rel="noopener">mededcoventry.org/Courses/Anaesthetics/AANE</a></li>
+        </ul>
+
+        <div class="divider"></div>
+        <div class="small">
+          <b>Disclaimer:</b> This site provides general professional information only and does not constitute medical advice.
+          If you need urgent medical help, contact local emergency services.
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">
+      © <span id="y"></span> Dr Rohit Mittal • Simple, fast, mobile-friendly professional profile.
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
