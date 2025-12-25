@@ -3,108 +3,246 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Dr Rohit Mittal - Consultant Anaesthetist & Perioperative Care Specialist with a specialist interest in Neuroanaesthesia. Professional profile, experience, interests, and contact." />
-  <title>Dr Rohit Mittal | Consultant Anaesthetist & Neuroanaesthesia</title>
+  <meta name="description" content="Dr Rohit Mittal (MBBS, FRCA, FCARCSI) - Consultant Anaesthetist & Perioperative Care Specialist with a specialist interest in Neuroanaesthesia." />
+  <meta name="theme-color" content="#0b1220" />
+  <title>Dr Rohit Mittal, MBBS FRCA FCARCSI | Consultant Anaesthetist & Neuroanaesthesia</title>
 
   <style>
     :root{
-      --bg:#0b1220; --text:#eaf0ff; --muted:#b9c4e2;
-      --line:rgba(255,255,255,.12); --accent:#77b6ff; --accent2:#a7ffdf;
-      --shadow: 0 20px 70px rgba(0,0,0,.35);
+      --bg:#070c18;
+      --panel:#0f1730;
+      --panel2:#0b1328;
+      --text:#eef3ff;
+      --muted:#b8c4e6;
+      --line:rgba(255,255,255,.10);
+      --accent:#7bb3ff;
+      --accent2:#a6ffe0;
+      --shadow: 0 18px 70px rgba(0,0,0,.38);
       --radius: 18px;
-      --max: 1080px;
+      --max: 1100px;
       --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
     }
+
     *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
     body{
-      margin:0;font-family:var(--font);
+      margin:0;
+      font-family:var(--font);
+      color:var(--text);
+      line-height:1.6;
       background:
-        radial-gradient(1200px 700px at 20% -10%, rgba(119,182,255,.25), transparent 60%),
-        radial-gradient(900px 600px at 90% 10%, rgba(167,255,223,.18), transparent 55%),
+        radial-gradient(1200px 700px at 18% -10%, rgba(123,179,255,.24), transparent 60%),
+        radial-gradient(900px 600px at 92% 10%, rgba(166,255,224,.16), transparent 55%),
+        radial-gradient(900px 700px at 50% 120%, rgba(123,179,255,.10), transparent 55%),
         var(--bg);
-      color:var(--text); line-height:1.55;
     }
+
     a{color:inherit}
-    .wrap{max-width:var(--max);margin:0 auto;padding:28px 18px 70px}
+    .wrap{max-width:var(--max);margin:0 auto;padding:28px 18px 72px}
+
+    /* Top bar */
     .nav{
       position:sticky; top:0; z-index:50;
-      backdrop-filter: blur(10px);
-      background: rgba(11,18,32,.62);
+      backdrop-filter: blur(12px);
+      background: rgba(7,12,24,.62);
       border-bottom: 1px solid var(--line);
     }
     .nav-inner{
-      max-width:var(--max);margin:0 auto;padding:14px 18px;
-      display:flex;align-items:center;justify-content:space-between;gap:14px
+      max-width:var(--max);
+      margin:0 auto;
+      padding:14px 18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px
     }
-    .brand{display:flex;flex-direction:column;gap:2px}
-    .brand b{letter-spacing:.2px}
-    .brand span{font-size:.92rem;color:var(--muted)}
-    .menu{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end;align-items:center}
-    .menu a{font-size:.95rem;color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:12px}
-    .menu a:hover{background:rgba(255,255,255,.06);color:var(--text)}
+    .brand{
+      display:flex;
+      flex-direction:column;
+      gap:2px;
+      min-width: 240px;
+    }
+    .brand .name{
+      font-weight:650;
+      letter-spacing:.2px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      align-items:baseline;
+    }
+    .brand .postnom{
+      font-weight:500;
+      font-size:.92rem;
+      color:var(--muted);
+      letter-spacing:.2px;
+    }
+    .brand .role{
+      font-size:.92rem;
+      color:var(--muted);
+    }
+
+    .menu{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+      align-items:center
+    }
+    .menu a{
+      font-size:.95rem;
+      color:var(--muted);
+      text-decoration:none;
+      padding:8px 10px;
+      border-radius:12px;
+      transition: background .15s ease, color .15s ease, transform .15s ease;
+    }
+    .menu a:hover{
+      background:rgba(255,255,255,.06);
+      color:var(--text);
+      transform: translateY(-1px);
+    }
+
     .btn{
-      display:inline-flex;align-items:center;justify-content:center;gap:10px;
-      padding:12px 14px;border-radius:14px;border:1px solid rgba(119,182,255,.35);
-      background: linear-gradient(180deg, rgba(119,182,255,.22), rgba(119,182,255,.08));
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:12px 14px;
+      border-radius:14px;
+      border:1px solid rgba(123,179,255,.38);
+      background: linear-gradient(180deg, rgba(123,179,255,.22), rgba(123,179,255,.08));
       box-shadow: 0 10px 30px rgba(0,0,0,.22);
       text-decoration:none;
-      transition: transform .15s ease;
+      transition: transform .15s ease, filter .15s ease;
       white-space:nowrap;
     }
-    .btn:hover{transform: translateY(-1px)}
+    .btn:hover{transform: translateY(-1px); filter: brightness(1.05)}
     .btn.secondary{
       border:1px solid rgba(255,255,255,.16);
       background: rgba(255,255,255,.06);
     }
-    .hero{display:grid;grid-template-columns: 1.2fr .8fr;gap:18px;align-items:stretch;margin-top:26px}
-    @media (max-width: 920px){ .hero{grid-template-columns:1fr} }
+
+    /* Cards */
     .card{
-      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
-      border:1px solid var(--line); border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.03));
+      border:1px solid var(--line);
+      border-radius: var(--radius);
       box-shadow: var(--shadow);
     }
-    .hero-left{padding:26px}
-    h1{margin:0 0 10px;font-size:clamp(1.9rem,3.2vw,2.7rem);letter-spacing:-.4px}
-    .subtitle{color:var(--muted);font-size:1.05rem;max-width:72ch}
-    .chips{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 18px}
+
+    /* Hero */
+    .hero{
+      display:grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap:18px;
+      align-items:stretch;
+      margin-top:26px
+    }
+    @media (max-width: 940px){
+      .hero{grid-template-columns:1fr}
+      .brand{min-width:unset}
+    }
+
+    .hero-left{padding:28px}
+    .kicker{
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+      color:var(--muted);
+      margin-bottom:12px;
+      font-size:.95rem;
+    }
+    .dot{width:8px;height:8px;border-radius:50%;background:var(--accent)}
+    h1{
+      margin:0 0 10px;
+      font-size:clamp(2.0rem,3.3vw,2.8rem);
+      letter-spacing:-.6px;
+      line-height:1.15;
+    }
+    .subtitle{
+      color:var(--muted);
+      font-size:1.06rem;
+      max-width:76ch;
+    }
+
+    .chips{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin:18px 0 18px
+    }
     .chip{
-      font-size:.92rem;color:var(--muted);
-      padding:8px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.14);
+      font-size:.92rem;
+      color:var(--muted);
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.14);
       background: rgba(255,255,255,.04);
     }
+
     .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+
     .hero-right{padding:18px;display:flex;flex-direction:column;gap:12px}
-    .fact{padding:14px 14px;border-radius:16px;border:1px solid rgba(255,255,255,.12);background: rgba(15,26,48,.45)}
+    .fact{
+      padding:14px 14px;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(15,23,48,.38);
+    }
     .fact b{display:block;margin-bottom:6px}
     .fact span{color:var(--muted);font-size:.95rem}
+
+    /* Sections */
     section{margin-top:22px}
     .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
     .col-12{grid-column: span 12}
-    @media (max-width: 920px){ .col-12{grid-column:span 12} }
-    .section-card{padding:18px}
-    h2{margin:0 0 10px;font-size:1.28rem}
+    @media (max-width: 940px){ .col-12{grid-column:span 12} }
+
+    .section-card{padding:20px}
+    h2{margin:0 0 10px;font-size:1.30rem;letter-spacing:-.2px}
     h3{margin:0 0 6px;font-size:1.06rem}
     p{margin:10px 0;color:var(--muted)}
     ul{margin:10px 0 0;padding-left:18px;color:var(--muted)}
     li{margin:6px 0}
-    .divider{height:1px;background:var(--line);margin:14px 0}
+
+    .divider{height:1px;background:var(--line);margin:16px 0}
     .small{font-size:.92rem;color:var(--muted)}
-    .kicker{display:inline-flex;gap:10px;align-items:center;color:var(--muted);margin-bottom:10px}
-    .dot{width:8px;height:8px;border-radius:50%;background:var(--accent)}
+    .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;}
+
     .tagrow{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
     .tag{
-      font-size:.85rem;color:var(--muted);
-      padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.14);
+      font-size:.85rem;
+      color:var(--muted);
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.14);
       background: rgba(255,255,255,.03);
     }
+
     .timeline{display:flex;flex-direction:column;gap:12px;margin-top:10px}
     .titem{
-      padding:14px;border-radius:16px;border:1px solid rgba(255,255,255,.12);
-      background: rgba(15,26,48,.35);
+      padding:14px;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(15,23,48,.28);
     }
     .tmeta{color:var(--muted);font-size:.93rem}
-    .footer{margin-top:24px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:.92rem}
-    .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;}
+
+    .footer{
+      margin-top:24px;
+      padding-top:18px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-size:.92rem;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    /* Nice selection */
+    ::selection{background:rgba(123,179,255,.28)}
   </style>
 </head>
 
@@ -112,9 +250,13 @@
   <div class="nav">
     <div class="nav-inner">
       <div class="brand">
-        <b>Dr Rohit Mittal</b>
-        <span>Consultant Anaesthetist & Perioperative Care Specialist</span>
+        <div class="name">
+          <span>Dr Rohit Mittal</span>
+          <span class="postnom">MBBS, FRCA, FCARCSI</span>
+        </div>
+        <div class="role">Consultant Anaesthetist &amp; Perioperative Care Specialist</div>
       </div>
+
       <div class="menu">
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
@@ -127,23 +269,24 @@
   </div>
 
   <div class="wrap">
+    <!-- HERO -->
     <div class="hero">
       <div class="card hero-left">
         <div class="kicker"><span class="dot"></span><span>Professional profile</span></div>
-        <h1>Dr Rohit Mittal</h1>
+        <h1>Consultant Anaesthetist &amp; Perioperative Care Specialist</h1>
         <div class="subtitle">
-          Consultant Anaesthetist &amp; Perioperative Care Specialist with a specialist interest in <b>Neuroanaesthesia</b>.
-          Focused on high-quality, patient-centred perioperative care, personalised anaesthesia protocols, and enhanced recovery through perioperative prehabilitation.
-          Experienced in healthcare consulting and medical devices to support wider system improvement.
+          Specialist interest in <b>Neuroanaesthesia</b>, with a focus on high-quality, patient-centred perioperative care,
+          personalised anaesthesia protocols, and enhanced surgical recovery through perioperative prehabilitation.
+          Experience in healthcare consulting and medical devices to support wider system improvement.
         </div>
 
         <div class="chips">
           <div class="chip">Neuroanaesthesia</div>
-          <div class="chip">Perioperative care</div>
-          <div class="chip">Personalised anaesthesia protocols</div>
+          <div class="chip">Perioperative Care</div>
+          <div class="chip">Personalised Anaesthesia</div>
           <div class="chip">Prehabilitation</div>
-          <div class="chip">Healthcare consulting</div>
-          <div class="chip">Medical devices</div>
+          <div class="chip">Healthcare Consulting</div>
+          <div class="chip">Medical Devices</div>
         </div>
 
         <div class="actions">
@@ -153,7 +296,7 @@
 
         <div class="divider"></div>
         <div class="small">
-          This website is for professional information only. It is not intended for urgent medical advice.
+          This website is for professional information only and is not intended for urgent medical advice.
           In an emergency, contact local emergency services.
         </div>
       </div>
@@ -176,18 +319,19 @@
         <div class="fact">
           <b>Links</b>
           <span>
-            <a href="https://uk.linkedin.com/in/rohit-mittal-65571178" target="_blank" rel="noopener">LinkedIn</a>
-            &nbsp;•&nbsp;
             <a href="https://www.mededcoventry.org/Courses/Anaesthetics/AANE" target="_blank" rel="noopener">Coventry Neuro Simulation</a>
+            &nbsp;•&nbsp;
+            <a href="https://uk.linkedin.com/in/rohit-mittal-65571178" target="_blank" rel="noopener">LinkedIn</a>
           </span>
         </div>
         <div class="fact">
-          <b>Location</b>
-          <span>United Kingdom</span>
+          <b>Contact</b>
+          <span><a href="mailto:contact@drmittal.co.uk">contact@drmittal.co.uk</a></span>
         </div>
       </div>
     </div>
 
+    <!-- ABOUT -->
     <section id="about" class="grid">
       <div class="card section-card col-12">
         <h2>About</h2>
@@ -208,9 +352,11 @@
       </div>
     </section>
 
+    <!-- EXPERIENCE -->
     <section id="experience" class="grid">
       <div class="card section-card col-12">
         <h2>Experience</h2>
+
         <div class="timeline">
           <div class="titem">
             <h3>Honorary Lecturer <span class="tmeta">• Warwick Medical School • Part-time</span></h3>
@@ -218,7 +364,7 @@
           </div>
 
           <div class="titem">
-            <h3>Consultant Neuroanaesthetist <span class="tmeta">• University Hospitals Coventry and Warwickshire (UHCW) NHS Trust • Full-time</span></h3>
+            <h3>Consultant Neuroanaesthetist <span class="tmeta">• University Hospitals Coventry &amp; Warwickshire (UHCW) NHS Trust • Full-time</span></h3>
             <div class="tmeta">Apr 2021 – Present • Coventry, England, United Kingdom</div>
             <div class="tagrow"><span class="tag">Healthcare Leadership</span></div>
           </div>
@@ -272,6 +418,7 @@
       </div>
     </section>
 
+    <!-- INTERESTS -->
     <section id="interests" class="grid">
       <div class="card section-card col-12">
         <h2>Clinical interests</h2>
@@ -285,6 +432,7 @@
       </div>
     </section>
 
+    <!-- EDUCATION -->
     <section id="education" class="grid">
       <div class="card section-card col-12">
         <h2>Education</h2>
@@ -309,6 +457,7 @@
       </div>
     </section>
 
+    <!-- SKILLS -->
     <section id="skills" class="grid">
       <div class="card section-card col-12">
         <h2>Skills</h2>
@@ -332,16 +481,13 @@
       </div>
     </section>
 
+    <!-- CONTACT -->
     <section id="contact" class="grid">
       <div class="card section-card col-12">
         <h2>Contact</h2>
-        <p>
-          For professional enquiries, please connect via LinkedIn or the relevant institutional channels.
-          This website is not monitored for clinical queries.
-        </p>
+        <p>For professional enquiries, please email:</p>
         <ul>
-          <li><b>LinkedIn:</b> <a href="https://uk.linkedin.com/in/rohit-mittal-65571178" target="_blank" rel="noopener">linkedin.com/in/rohit-mittal-65571178</a></li>
-          <li><b>Coventry Neuro Simulation course:</b> <a href="https://www.mededcoventry.org/Courses/Anaesthetics/AANE" target="_blank" rel="noopener">mededcoventry.org/Courses/Anaesthetics/AANE</a></li>
+          <li><b>Email:</b> <a href="mailto:contact@drmittal.co.uk">contact@drmittal.co.uk</a></li>
         </ul>
 
         <div class="divider"></div>
@@ -353,7 +499,8 @@
     </section>
 
     <div class="footer">
-      © <span id="y"></span> Dr Rohit Mittal • Simple, fast, mobile-friendly professional profile.
+      <span>© <span id="y"></span> Dr Rohit Mittal</span>
+      <span class="small">MBBS, FRCA, FCARCSI</span>
     </div>
   </div>
 
