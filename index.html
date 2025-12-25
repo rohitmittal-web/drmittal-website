@@ -3,28 +3,35 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Dr Rohit Mittal, MBBS FRCA FCARCSI - Consultant Anaesthetist & Perioperative Care Specialist with a specialist interest in Neuroanaesthesia." />
-  <meta name="theme-color" content="#0b2a6f" />
+  <meta name="description" content="Dr Rohit Mittal, MBBS FRCA FCARCSI – Consultant Anaesthetist & Neuroanaesthetic Specialist. Neuroanaesthesia, perioperative care, prehabilitation and personalised anaesthesia protocols." />
+  <meta name="theme-color" content="#0b1220" />
   <title>Dr Rohit Mittal, MBBS FRCA FCARCSI | Consultant Anaesthetist</title>
 
-  <!-- Ultra-minimal, modern “Option A” (Apple-clean) -->
+  <!--
+    Cloudflare-ready: single static file.
+    Put your brother's headshot at: /assets/headshot.jpg
+    (Upload "SSP_216_2.jpeg" and rename to headshot.jpg)
+  -->
+
   <style>
     :root{
-      --bg: #fbfbfd;                 /* Apple-like off-white */
-      --card: #ffffff;
-      --text: #0b1220;               /* charcoal */
-      --muted: #5f6b7a;
-      --line: rgba(15, 23, 42, .10);
+      --bg: #070b14;
+      --panel: rgba(255,255,255,.06);
+      --panel2: rgba(255,255,255,.08);
+      --line: rgba(255,255,255,.10);
+      --text: #eef3ff;
+      --muted: rgba(238,243,255,.72);
 
-      --accent: #0b2a6f;             /* deep blue */
-      --accent-2: #2f6bff;           /* brighter blue for hover */
-      --accent-soft: rgba(11, 42, 111, .10);
+      --accent: #6aa8ff;
+      --accent2:#67ffd7;
+      --accent3:#b28cff;
 
+      --shadow: 0 24px 90px rgba(0,0,0,.45);
+      --shadow2: 0 18px 60px rgba(0,0,0,.35);
       --radius: 18px;
-      --shadow: 0 18px 60px rgba(2, 8, 20, .08);
-      --shadow-soft: 0 10px 35px rgba(2, 8, 20, .06);
-
+      --radius2: 22px;
       --max: 1120px;
+
       --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
     }
 
@@ -32,272 +39,332 @@
     html{scroll-behavior:smooth}
     body{
       margin:0;
-      font-family:var(--font);
-      color:var(--text);
+      font-family: var(--font);
+      color: var(--text);
       background:
-        radial-gradient(900px 500px at 18% -10%, rgba(47,107,255,.10), transparent 60%),
-        radial-gradient(900px 520px at 95% 0%, rgba(11,42,111,.08), transparent 55%),
+        radial-gradient(900px 600px at 16% -10%, rgba(106,168,255,.18), transparent 55%),
+        radial-gradient(1000px 650px at 92% 0%, rgba(103,255,215,.14), transparent 58%),
+        radial-gradient(800px 700px at 50% 120%, rgba(178,140,255,.10), transparent 60%),
         var(--bg);
       line-height:1.6;
     }
     a{color:inherit}
-    .wrap{max-width:var(--max);margin:0 auto;padding:28px 18px 80px}
+    .wrap{max-width:var(--max);margin:0 auto;padding:26px 18px 70px}
 
-    /* Top nav */
     .nav{
-      position:sticky; top:0; z-index:50;
-      backdrop-filter: blur(10px);
-      background: rgba(251, 251, 253, .78);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(12px);
+      background: rgba(7,11,20,.62);
       border-bottom: 1px solid var(--line);
     }
     .nav-inner{
-      max-width:var(--max);
-      margin:0 auto;
-      padding:14px 18px;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 14px 18px;
       display:flex;
       align-items:center;
       justify-content:space-between;
-      gap:14px;
+      gap: 14px;
     }
     .brand{
       display:flex;
       flex-direction:column;
-      gap:4px;
-      min-width: 260px;
+      gap: 3px;
+      min-width: 280px;
     }
     .brand .name{
       display:flex;
-      align-items:baseline;
-      gap:10px;
       flex-wrap:wrap;
-      letter-spacing:-.2px;
+      align-items:baseline;
+      gap: 10px;
+      letter-spacing: -.2px;
     }
-    .brand .name strong{font-weight:750}
+    .brand .name strong{font-weight: 780}
     .brand .postnom{
-      font-size:.92rem;
-      color:var(--muted);
-      font-weight:550;
-      letter-spacing:.2px;
+      font-size: .92rem;
+      color: var(--muted);
+      font-weight: 600;
+      letter-spacing: .18px;
     }
     .brand .role{
-      font-size:.92rem;
-      color:var(--muted);
+      font-size: .92rem;
+      color: var(--muted);
     }
-
     .menu{
       display:flex;
-      gap:8px;
       flex-wrap:wrap;
+      gap: 8px;
       justify-content:flex-end;
       align-items:center;
     }
     .menu a{
-      font-size:.95rem;
+      font-size: .95rem;
+      color: var(--muted);
       text-decoration:none;
-      color:var(--muted);
-      padding:8px 10px;
-      border-radius:12px;
-      transition: background .15s ease, color .15s ease, transform .15s ease;
+      padding: 8px 10px;
+      border-radius: 12px;
+      transition: transform .15s ease, background .15s ease, color .15s ease;
     }
     .menu a:hover{
-      background: rgba(11,42,111,.06);
+      background: rgba(255,255,255,.06);
       color: var(--text);
       transform: translateY(-1px);
     }
 
-    /* Buttons */
     .btn{
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      gap:10px;
-      padding:12px 14px;
-      border-radius:14px;
-      border:1px solid rgba(11,42,111,.16);
-      background: linear-gradient(180deg, rgba(11,42,111,.10), rgba(11,42,111,.06));
-      color: var(--accent);
+      gap: 10px;
+      padding: 12px 14px;
+      border-radius: 14px;
+      border: 1px solid rgba(106,168,255,.30);
+      background: linear-gradient(180deg, rgba(106,168,255,.20), rgba(106,168,255,.08));
+      box-shadow: 0 14px 40px rgba(0,0,0,.25);
       text-decoration:none;
-      box-shadow: var(--shadow-soft);
-      transition: transform .15s ease, background .15s ease, border-color .15s ease;
       white-space:nowrap;
+      transition: transform .15s ease, filter .15s ease, border-color .15s ease;
     }
-    .btn:hover{
-      transform: translateY(-1px);
-      border-color: rgba(11,42,111,.24);
-      background: linear-gradient(180deg, rgba(47,107,255,.14), rgba(11,42,111,.06));
-    }
-    .btn.primary{
-      border-color: rgba(11,42,111,.25);
-      background: linear-gradient(180deg, rgba(11,42,111,1), rgba(11,42,111,.92));
-      color:#fff;
-      box-shadow: 0 16px 45px rgba(11,42,111,.22);
-    }
-    .btn.primary:hover{
-      background: linear-gradient(180deg, rgba(47,107,255,1), rgba(11,42,111,.95));
+    .btn:hover{transform: translateY(-1px); filter: brightness(1.05); border-color: rgba(106,168,255,.45)}
+    .btn.secondary{
+      border: 1px solid rgba(255,255,255,.16);
+      background: rgba(255,255,255,.06);
+      box-shadow: none;
     }
 
-    /* Layout */
     .hero{
-      margin-top:26px;
+      margin-top: 18px;
+      border-radius: 26px;
+      border: 1px solid rgba(255,255,255,.12);
+      overflow:hidden;
+      box-shadow: var(--shadow);
+      background:
+        radial-gradient(900px 540px at 20% 0%, rgba(106,168,255,.24), transparent 55%),
+        radial-gradient(900px 540px at 80% 20%, rgba(103,255,215,.18), transparent 55%),
+        linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      position: relative;
+    }
+
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background-image:
+        linear-gradient(0deg, rgba(7,11,20,.86), rgba(7,11,20,.42)),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1600' height='900' viewBox='0 0 1600 900'%3E%3Cdefs%3E%3CradialGradient id='g' cx='50%25' cy='30%25' r='70%25'%3E%3Cstop offset='0' stop-color='%236aa8ff' stop-opacity='0.35'/%3E%3Cstop offset='0.55' stop-color='%2367ffd7' stop-opacity='0.12'/%3E%3Cstop offset='1' stop-color='%23070b14' stop-opacity='0'/%3E%3C/radialGradient%3E%3ClinearGradient id='p' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23ffffff' stop-opacity='0.12'/%3E%3Cstop offset='1' stop-color='%23ffffff' stop-opacity='0.02'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1600' height='900' fill='%23070b14'/%3E%3Crect width='1600' height='900' fill='url(%23g)'/%3E%3Cg opacity='0.85'%3E%3Cellipse cx='1180' cy='160' rx='210' ry='115' fill='url(%23p)' stroke='%23ffffff' stroke-opacity='0.16'/%3E%3Cellipse cx='1180' cy='160' rx='120' ry='70' fill='none' stroke='%236aa8ff' stroke-opacity='0.25'/%3E%3Ccircle cx='1060' cy='150' r='18' fill='%23ffffff' fill-opacity='0.18'/%3E%3Ccircle cx='1120' cy='120' r='14' fill='%23ffffff' fill-opacity='0.14'/%3E%3Ccircle cx='1240' cy='135' r='16' fill='%23ffffff' fill-opacity='0.16'/%3E%3Ccircle cx='1305' cy='170' r='12' fill='%23ffffff' fill-opacity='0.12'/%3E%3C/g%3E%3Cg opacity='0.85'%3E%3Crect x='1020' y='330' width='380' height='220' rx='18' fill='url(%23p)' stroke='%23ffffff' stroke-opacity='0.14'/%3E%3Crect x='1050' y='365' width='320' height='150' rx='12' fill='%23070b14' fill-opacity='0.72'/%3E%3Cpath d='M1065 440 C1110 410, 1140 470, 1180 440 S1250 410, 1290 440 S1350 470, 1360 430' stroke='%2367ffd7' stroke-opacity='0.55' stroke-width='4' fill='none'/%3E%3Cpath d='M1065 480 L1360 480' stroke='%236aa8ff' stroke-opacity='0.22' stroke-width='2'/%3E%3C/g%3E%3Cg opacity='0.55'%3E%3Crect x='180' y='520' width='260' height='220' rx='18' fill='%23ffffff' fill-opacity='0.06' stroke='%23ffffff' stroke-opacity='0.10'/%3E%3Crect x='210' y='555' width='200' height='85' rx='10' fill='%23070b14' fill-opacity='0.65'/%3E%3Crect x='210' y='655' width='120' height='20' rx='8' fill='%236aa8ff' fill-opacity='0.18'/%3E%3Crect x='210' y='685' width='150' height='20' rx='8' fill='%2367ffd7' fill-opacity='0.14'/%3E%3C/g%3E%3C/svg%3E");
+      background-size: cover;
+      background-position: center;
+      filter: saturate(1.1) contrast(1.05);
+    }
+
+    .hero-inner{
+      position: relative;
+      padding: 34px 26px;
       display:grid;
-      grid-template-columns: 1.15fr .85fr;
-      gap:18px;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 16px;
       align-items:stretch;
     }
-    @media (max-width: 920px){
-      .hero{grid-template-columns:1fr}
+    @media (max-width: 980px){
+      .hero-inner{grid-template-columns: 1fr}
       .brand{min-width:unset}
     }
 
-    .card{
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-
-    .hero-left{padding:28px}
+    .hero-left{padding: 6px 6px 6px 6px;}
     .kicker{
       display:inline-flex;
       align-items:center;
       gap:10px;
-      color:var(--muted);
+      color: rgba(238,243,255,.78);
       font-size:.95rem;
-      margin-bottom:12px;
+      margin-bottom: 10px;
     }
     .dot{
       width:8px;height:8px;border-radius:50%;
       background: var(--accent);
-      box-shadow: 0 0 0 6px rgba(11,42,111,.10);
+      box-shadow: 0 0 0 7px rgba(106,168,255,.18);
     }
 
     h1{
-      margin:0 0 12px;
-      font-size: clamp(2.0rem, 3.1vw, 2.8rem);
+      margin: 0 0 12px;
+      font-size: clamp(2.0rem, 3.2vw, 3.0rem);
       letter-spacing: -0.8px;
       line-height: 1.12;
     }
-    .subtitle{
-      color:var(--muted);
-      font-size: 1.05rem;
-      max-width: 80ch;
+    .lead{
+      color: rgba(238,243,255,.78);
+      max-width: 70ch;
+      font-size: 1.06rem;
     }
-    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
 
-    /* Stat chips */
-    .stats{
-      margin-top:20px;
+    .pillrow{
+      display:flex; flex-wrap:wrap; gap:10px;
+      margin-top: 16px;
+    }
+    .pill{
+      font-size: .92rem;
+      color: rgba(238,243,255,.78);
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      backdrop-filter: blur(8px);
+    }
+
+    .hero-actions{
+      display:flex; flex-wrap:wrap; gap:12px;
+      margin-top: 18px;
+    }
+
+    .hero-right{
+      display:flex;
+      flex-direction:column;
+      gap: 12px;
+    }
+
+    .glass{
+      padding: 16px;
+      border-radius: var(--radius2);
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.07);
+      box-shadow: var(--shadow2);
+      backdrop-filter: blur(10px);
+    }
+    .glass b{display:block; margin-bottom: 6px; letter-spacing: -.2px}
+    .glass .gtext{color: rgba(238,243,255,.78); font-size:.95rem}
+
+    section{margin-top: 18px}
+    .grid{display:grid; grid-template-columns: repeat(12,1fr); gap: 14px}
+    .col-12{grid-column: span 12}
+    .col-7{grid-column: span 7}
+    .col-5{grid-column: span 5}
+    @media (max-width: 980px){ .col-7,.col-5{grid-column: span 12} }
+
+    .card{
+      border-radius: var(--radius2);
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.05);
+      box-shadow: var(--shadow2);
+      overflow:hidden;
+    }
+    .card-inner{padding: 20px}
+    h2{margin:0 0 10px; font-size:1.22rem; letter-spacing:-.3px}
+    h3{margin:0 0 6px; font-size:1.03rem; letter-spacing:-.2px}
+    p{margin:10px 0; color: rgba(238,243,255,.78)}
+    .muted{color: rgba(238,243,255,.72)}
+    .divider{height:1px; background: rgba(255,255,255,.12); margin: 16px 0}
+
+    .about-grid{
       display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap:12px;
+      grid-template-columns: 180px 1fr;
+      gap: 16px;
+      align-items:start;
     }
-    @media (max-width: 920px){ .stats{grid-template-columns:1fr} }
-    .stat{
-      padding:14px 14px;
-      border-radius: 16px;
-      border: 1px solid rgba(11,42,111,.10);
-      background: linear-gradient(180deg, rgba(47,107,255,.05), rgba(11,42,111,.03));
+    @media (max-width: 680px){ .about-grid{grid-template-columns:1fr} }
+    .headshot{
+      width: 180px;
+      aspect-ratio: 1 / 1;
+      border-radius: 20px;
+      object-fit: cover;
+      border: 1px solid rgba(255,255,255,.18);
+      box-shadow: 0 18px 60px rgba(0,0,0,.35);
+      background: rgba(255,255,255,.05);
     }
-    .stat b{display:block; font-size: .95rem; letter-spacing:-.2px}
-    .stat span{display:block; margin-top:6px; color:var(--muted); font-size:.95rem}
 
-    /* Right column cards */
-    .hero-right{padding:18px;display:flex;flex-direction:column;gap:12px}
-    .panel{
-      padding:14px 14px;
-      border-radius:16px;
-      border:1px solid var(--line);
-      background: linear-gradient(180deg, rgba(11,42,111,.03), rgba(47,107,255,.02));
+    .tabs{
+      margin-top: 14px;
+      display:flex;
+      flex-wrap:wrap;
+      gap: 10px;
     }
-    .panel b{display:block;margin-bottom:6px;letter-spacing:-.2px}
-    .panel .ptext{color:var(--muted);font-size:.95rem}
+    .tab-btn{
+      appearance:none;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      color: rgba(238,243,255,.78);
+      padding: 10px 12px;
+      border-radius: 999px;
+      cursor:pointer;
+      font: inherit;
+      font-size: .93rem;
+      transition: transform .15s ease, border-color .15s ease, background .15s ease, color .15s ease;
+    }
+    .tab-btn:hover{transform: translateY(-1px); border-color: rgba(106,168,255,.35)}
+    .tab-btn[aria-selected="true"]{
+      border-color: rgba(106,168,255,.55);
+      background: linear-gradient(180deg, rgba(106,168,255,.25), rgba(106,168,255,.10));
+      color: var(--text);
+      box-shadow: 0 14px 40px rgba(0,0,0,.25);
+    }
 
-    /* Sections */
-    section{margin-top:18px}
-    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
-    .col-12{grid-column:span 12}
-    .col-7{grid-column:span 7}
-    .col-5{grid-column:span 5}
-    @media (max-width: 920px){ .col-7,.col-5{grid-column:span 12} }
+    .tab-panel{
+      margin-top: 14px;
+      padding: 14px 14px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.05);
+    }
+    .tab-panel b{display:block;margin-bottom:6px}
+    .tab-panel .tp{color: rgba(238,243,255,.78); margin: 0}
 
-    .section-card{padding:22px}
-    h2{margin:0 0 10px;font-size:1.25rem;letter-spacing:-.3px}
-    h3{margin:0 0 6px;font-size:1.03rem;letter-spacing:-.2px}
-    p{margin:10px 0;color:var(--muted)}
-    .divider{height:1px;background:var(--line);margin:16px 0}
-
-    /* Timeline */
     .timeline{display:flex;flex-direction:column;gap:12px;margin-top:12px}
     .titem{
-      padding:14px;
-      border-radius:16px;
-      border:1px solid var(--line);
-      background: #fff;
-      box-shadow: 0 10px 26px rgba(2,8,20,.05);
+      padding: 14px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.05);
     }
-    .tmeta{color:var(--muted);font-size:.93rem}
-    .tbadge{
-      display:inline-flex; align-items:center; gap:8px;
-      padding:6px 10px; border-radius:999px;
-      border:1px solid rgba(11,42,111,.14);
-      background: rgba(11,42,111,.05);
-      color: var(--accent);
-      font-size:.85rem;
-      font-weight:600;
-      margin-top:10px;
-    }
+    .tmeta{color: rgba(238,243,255,.72); font-size:.93rem}
 
-    /* Tags */
     .tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
     .tag{
-      padding:8px 12px;
-      border-radius:999px;
-      border:1px solid rgba(15,23,42,.10);
-      background: rgba(11,42,111,.04);
-      color: #263043;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      color: rgba(238,243,255,.78);
       font-size:.92rem;
     }
     .tag.emph{
-      border-color: rgba(11,42,111,.18);
-      background: rgba(11,42,111,.08);
-      color: var(--accent);
-      font-weight:650;
+      border-color: rgba(103,255,215,.42);
+      background: rgba(103,255,215,.10);
+      color: var(--text);
     }
 
-    /* Contact */
-    .contact-card{
-      display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;
-      padding:18px;
-      border-radius: 18px;
-      border: 1px solid rgba(11,42,111,.16);
-      background: linear-gradient(180deg, rgba(47,107,255,.08), rgba(11,42,111,.04));
+    .contact{
+      display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;
+      gap: 12px;
+      padding: 18px;
+      border-radius: 22px;
+      border: 1px solid rgba(103,255,215,.22);
+      background: linear-gradient(180deg, rgba(103,255,215,.14), rgba(106,168,255,.06));
     }
     .email{
-      font-size:1.05rem;
-      font-weight:700;
-      letter-spacing:-.2px;
-      color: var(--accent);
+      font-weight: 750;
+      letter-spacing: -.2px;
+      color: var(--text);
+      text-decoration:none;
+      border-bottom: 1px solid rgba(103,255,215,.45);
+      padding-bottom: 2px;
     }
-    .small{
-      color:var(--muted);
-      font-size:.92rem;
-    }
+    .disclaimer{color: rgba(238,243,255,.72); font-size:.92rem}
 
-    /* Footer */
     .footer{
-      margin-top:22px;
-      padding-top:18px;
-      border-top:1px solid var(--line);
+      margin-top: 22px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255,255,255,.12);
       display:flex;
       flex-wrap:wrap;
-      gap:10px;
+      gap: 10px;
       justify-content:space-between;
       align-items:center;
-      color:var(--muted);
+      color: rgba(238,243,255,.72);
       font-size:.92rem;
     }
 
-    ::selection{background: rgba(47,107,255,.18)}
+    ::selection{background: rgba(106,168,255,.25)}
   </style>
 </head>
 
@@ -315,7 +382,6 @@
       <div class="menu">
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
-        <a href="#interests">Interests</a>
         <a href="#education">Education</a>
         <a href="#skills">Skills</a>
         <a class="btn" href="#contact">Contact</a>
@@ -324,253 +390,245 @@
   </div>
 
   <div class="wrap">
-    <!-- HERO -->
-    <div class="hero">
-      <div class="card hero-left">
-        <div class="kicker"><span class="dot"></span><span>Professional profile</span></div>
-        <h1>Consultant Anaesthetist with a specialist interest in Neuroanaesthesia</h1>
-        <div class="subtitle">
-          Delivering high-quality, patient-centred perioperative care with a focus on personalised anaesthesia protocols,
-          perioperative prehabilitation, and enhanced recovery. Experience in healthcare consulting and medical devices to support wider system improvement.
+    <div class="hero" id="top">
+      <div class="hero-inner">
+        <div class="hero-left">
+          <div class="kicker"><span class="dot"></span><span>Consultant Anaesthetist</span></div>
+          <h1>Neuroanaesthesia &amp; perioperative care, with a focus on personalised protocols.</h1>
+          <div class="lead">
+            Delivering high-quality, patient-centred perioperative care with a specialist interest in Neuroanaesthesia.
+            Dedicated to enhancing surgical recovery through perioperative prehabilitation, and leveraging experience in healthcare consulting and medical devices
+            to support wider system improvement.
+          </div>
+
+          <div class="pillrow" aria-label="Key areas">
+            <div class="pill">Neuroanaesthesia</div>
+            <div class="pill">Spinal surgery</div>
+            <div class="pill">Interventional neuroradiology</div>
+            <div class="pill">Endovascular stroke treatment</div>
+            <div class="pill">Orthopaedic surgery</div>
+          </div>
+
+          <div class="hero-actions">
+            <a class="btn" href="#contact">Email</a>
+            <a class="btn secondary" href="#about">About</a>
+          </div>
         </div>
 
-        <div class="actions">
-          <a class="btn primary" href="#contact">Email</a>
-          <a class="btn" href="#experience">View experience</a>
-        </div>
-
-        <div class="stats">
-          <div class="stat">
+        <div class="hero-right">
+          <div class="glass">
             <b>Current role</b>
-            <span>Consultant Neuroanaesthetist (UHCW NHS Trust)</span>
+            <div class="gtext">Consultant Neuroanaesthetist, University Hospitals Coventry &amp; Warwickshire (UHCW) NHS Trust (Apr 2021–Present)</div>
           </div>
-          <div class="stat">
+          <div class="glass">
             <b>Academic</b>
-            <span>Honorary Lecturer (Warwick Medical School)</span>
+            <div class="gtext">Honorary Lecturer, Warwick Medical School (Apr 2025–Present)</div>
           </div>
-          <div class="stat">
-            <b>Education & leadership</b>
-            <span>Course Director (Coventry Neuro Simulation)</span>
+          <div class="glass">
+            <b>Leadership / education</b>
+            <div class="gtext">Course Director, Coventry Neuro Simulation (Apr 2021–Present) • Anaesthetic Associate Lead Tutor (Oct 2021–May 2025)</div>
           </div>
-        </div>
-
-        <div class="divider"></div>
-        <div class="small">
-          This website is for professional information only and is not intended for urgent medical advice.
-          In an emergency, contact local emergency services.
-        </div>
-      </div>
-
-      <div class="card hero-right">
-        <div class="panel">
-          <b>Core focus</b>
-          <div class="ptext">Neuroanaesthesia • Perioperative care • Personalised anaesthesia protocols • Prehabilitation</div>
-        </div>
-        <div class="panel">
-          <b>Current appointments</b>
-          <div class="ptext">
-            Consultant Neuroanaesthetist, UHCW NHS Trust (Apr 2021–Present)<br/>
-            Honorary Lecturer, Warwick Medical School (Apr 2025–Present)
+          <div class="glass">
+            <b>Quick links</b>
+            <div class="gtext">
+              <a href="https://www.mededcoventry.org/Courses/Anaesthetics/AANE" target="_blank" rel="noopener">Coventry Neuro Simulation</a>
+              &nbsp;•&nbsp;
+              <a href="https://uk.linkedin.com/in/rohit-mittal-65571178" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
           </div>
-        </div>
-        <div class="panel">
-          <b>Links</b>
-          <div class="ptext">
-            <a href="https://www.mededcoventry.org/Courses/Anaesthetics/AANE" target="_blank" rel="noopener">Coventry Neuro Simulation</a>
-            &nbsp;•&nbsp;
-            <a href="https://uk.linkedin.com/in/rohit-mittal-65571178" target="_blank" rel="noopener">LinkedIn</a>
-          </div>
-        </div>
-        <div class="panel">
-          <b>Contact</b>
-          <div class="ptext"><a class="email" href="mailto:contact@drmittal.co.uk">contact@drmittal.co.uk</a></div>
         </div>
       </div>
     </div>
 
-    <!-- ABOUT + QUICK SUMMARY -->
     <section id="about" class="grid">
-      <div class="card section-card col-7">
-        <h2>About</h2>
-        <p>
-          Highly experienced Consultant Anaesthetist committed to delivering high-quality, patient-centred perioperative care.
-          Specialising in Neuroanaesthesia and the implementation of personalised anaesthesia protocols to optimise patient outcomes.
-          Dedicated to enhancing surgical recovery through perioperative prehabilitation and leveraging expertise in healthcare consulting and medical devices
-          to drive sector-wide improvements.
-        </p>
-        <div class="tags">
-          <span class="tag emph">Neuroanaesthesia</span>
-          <span class="tag">Perioperative care</span>
-          <span class="tag">Personalised anaesthesia</span>
-          <span class="tag">Prehabilitation</span>
-          <span class="tag">Healthcare consulting</span>
-          <span class="tag">Medical devices</span>
-        </div>
-      </div>
+      <div class="card col-12">
+        <div class="card-inner">
+          <h2>About</h2>
 
-      <div class="card section-card col-5">
-        <h2>Highlights</h2>
-        <p class="small" style="margin-top:0">
-          A concise overview of key roles and responsibilities.
-        </p>
-        <div class="divider"></div>
-        <div class="small">
-          <b>Education leadership:</b> Anaesthetic Associate Lead Tutor (Oct 2021–May 2025)<br/>
-          <b>Course leadership:</b> Course Director, Coventry Neuro Simulation (Apr 2021–Present)<br/>
-          <b>Teaching:</b> Honorary Lecturer, Warwick Medical School (Apr 2025–Present)
+          <div class="about-grid">
+            <img class="headshot" src="assets/headshot.jpg" alt="Professional headshot of Dr Rohit Mittal" />
+
+            <div>
+              <p>
+                Highly experienced Consultant Anaesthetist committed to delivering high-quality, patient-centred perioperative care.
+                Specialising in Neuroanaesthesia and the implementation of personalised anaesthesia protocols to optimise patient outcomes.
+                Dedicated to enhancing surgical recovery through perioperative prehabilitation and leveraging expertise in healthcare consulting and medical devices
+                to drive sector-wide improvements.
+              </p>
+
+              <div class="divider"></div>
+
+              <div class="muted" style="margin-bottom:10px;">
+                <b>Specialist interests</b> (select a tab)
+              </div>
+
+              <div class="tabs" role="tablist" aria-label="Specialist interests">
+                <button class="tab-btn" role="tab" id="tab-neuro" aria-controls="panel-neuro" aria-selected="true">Neuroanaesthesia</button>
+                <button class="tab-btn" role="tab" id="tab-spine" aria-controls="panel-spine" aria-selected="false">Spinal surgery</button>
+                <button class="tab-btn" role="tab" id="tab-inr" aria-controls="panel-inr" aria-selected="false">Interventional neuroradiology</button>
+                <button class="tab-btn" role="tab" id="tab-stroke" aria-controls="panel-stroke" aria-selected="false">Endovascular stroke treatment</button>
+                <button class="tab-btn" role="tab" id="tab-ortho" aria-controls="panel-ortho" aria-selected="false">Orthopaedic surgery</button>
+              </div>
+              <div class="tab-panel" role="tabpanel" id="panel-neuro" aria-labelledby="tab-neuro">
+                <b>Neuroanaesthesia</b>
+                <p class="tp">Anaesthetic care for neurosurgical and neuro-interventional procedures, with a focus on safety, physiology, and perioperative outcomes.</p>
+              </div>
+
+              <div class="tab-panel" role="tabpanel" id="panel-spine" aria-labelledby="tab-spine" hidden>
+                <b>Spinal surgery</b>
+                <p class="tp">Perioperative anaesthetic management for complex spine surgery, supporting enhanced recovery and individualised perioperative planning.</p>
+              </div>
+
+              <div class="tab-panel" role="tabpanel" id="panel-inr" aria-labelledby="tab-inr" hidden>
+                <b>Interventional neuroradiology</b>
+                <p class="tp">Anaesthesia for neuro-interventional radiology procedures, supporting stable conditions and optimised neurological care pathways.</p>
+              </div>
+
+              <div class="tab-panel" role="tabpanel" id="panel-stroke" aria-labelledby="tab-stroke" hidden>
+                <b>Endovascular stroke treatment</b>
+                <p class="tp">Anaesthetic support for endovascular treatment of stroke, emphasising timely workflow and safe physiological targets.</p>
+              </div>
+
+              <div class="tab-panel" role="tabpanel" id="panel-ortho" aria-labelledby="tab-ortho" hidden>
+                <b>Orthopaedic surgery</b>
+                <p class="tp">Anaesthesia for orthopaedic surgery (including arthroplasty), with attention to analgesia, mobilisation, and recovery.</p>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="divider"></div>
+          <div class="disclaimer">
+            This website is for professional information only and is not intended for urgent medical advice.
+            In an emergency, contact local emergency services.
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- EXPERIENCE -->
     <section id="experience" class="grid">
-      <div class="card section-card col-12">
-        <h2>Experience</h2>
+      <div class="card col-12">
+        <div class="card-inner">
+          <h2>Experience</h2>
 
-        <div class="timeline">
-          <div class="titem">
-            <h3>Honorary Lecturer <span class="tmeta">• Warwick Medical School • Part-time</span></h3>
-            <div class="tmeta">Apr 2025 – Present</div>
-            <div class="tbadge">Medical education</div>
+          <div class="timeline">
+            <div class="titem">
+              <h3>Honorary Lecturer <span class="tmeta">• Warwick Medical School • Part-time</span></h3>
+              <div class="tmeta">Apr 2025 – Present</div>
+            </div>
+
+            <div class="titem">
+              <h3>Consultant Neuroanaesthetist <span class="tmeta">• University Hospitals Coventry &amp; Warwickshire (UHCW) NHS Trust • Full-time</span></h3>
+              <div class="tmeta">Apr 2021 – Present • Coventry, England, United Kingdom</div>
+            </div>
+
+            <div class="titem">
+              <h3>Anaesthetic Associate Lead Tutor <span class="tmeta">• UHCW NHS Trust • Contract</span></h3>
+              <div class="tmeta">Oct 2021 – May 2025 • United Kingdom</div>
+            </div>
+
+            <div class="titem">
+              <h3>Course Director <span class="tmeta">• Coventry Neuro Simulation</span></h3>
+              <div class="tmeta">Apr 2021 – Present • Coventry, England, United Kingdom</div>
+              <div class="tmeta" style="margin-top:8px;">
+                Course link: <a href="https://www.mededcoventry.org/Courses/Anaesthetics/AANE" target="_blank" rel="noopener">mededcoventry.org/Courses/Anaesthetics/AANE</a>
+              </div>
+            </div>
+
+            <div class="titem">
+              <h3>Professional Development Tutor <span class="tmeta">• Keele University</span></h3>
+              <div class="tmeta">Feb 2019 – Apr 2021 • United Kingdom</div>
+              <div class="tmeta" style="margin-top:8px;">Professional Development Tutor at Keele Medical School (Years 2–5)</div>
+            </div>
+
+            <div class="titem">
+              <h3>Clinical Tutor (Procedural Skills) <span class="tmeta">• Keele University</span></h3>
+              <div class="tmeta">Jan 2016 – Jan 2019 • United Kingdom</div>
+            </div>
+
+            <div class="titem">
+              <h3>Consultant Neuro Anaesthetist <span class="tmeta">• University Hospitals of North Midlands NHS Trust • Full-time</span></h3>
+              <div class="tmeta">Nov 2013 – Apr 2021</div>
+            </div>
+
+            <div class="titem">
+              <h3>Consultant Anaesthetist <span class="tmeta">• ROH, Birmingham, United Kingdom</span></h3>
+              <div class="tmeta">May 2013 – Nov 2013</div>
+              <div class="tmeta" style="margin-top:8px;">Complex spine surgery, arthroplasty</div>
+            </div>
           </div>
 
-          <div class="titem">
-            <h3>Consultant Neuroanaesthetist <span class="tmeta">• University Hospitals Coventry &amp; Warwickshire (UHCW) NHS Trust • Full-time</span></h3>
-            <div class="tmeta">Apr 2021 – Present • Coventry, England, United Kingdom</div>
-            <div class="tbadge">Healthcare leadership</div>
-          </div>
-
-          <div class="titem">
-            <h3>Anaesthetic Associate Lead Tutor <span class="tmeta">• UHCW NHS Trust • Contract</span></h3>
-            <div class="tmeta">Oct 2021 – May 2025 • United Kingdom</div>
-            <div class="tbadge">Education leadership</div>
-          </div>
-
-          <div class="titem">
-            <h3>Course Director <span class="tmeta">• Coventry Neuro Simulation</span></h3>
-            <div class="tmeta">Apr 2021 – Present • Coventry, England, United Kingdom</div>
-            <p class="small" style="margin:10px 0 0">
-              Course link:
-              <a href="https://www.mededcoventry.org/Courses/Anaesthetics/AANE" target="_blank" rel="noopener">mededcoventry.org/Courses/Anaesthetics/AANE</a>
-            </p>
-            <div class="tbadge">Clinical simulation</div>
-          </div>
-
-          <div class="titem">
-            <h3>Professional Development Tutor <span class="tmeta">• Keele University</span></h3>
-            <div class="tmeta">Feb 2019 – Apr 2021 • United Kingdom</div>
-            <p class="small" style="margin:10px 0 0">Professional Development Tutor at Keele Medical School (Years 2–5)</p>
-            <div class="tbadge">Medical education</div>
-          </div>
-
-          <div class="titem">
-            <h3>Clinical Tutor (Procedural Skills) <span class="tmeta">• Keele University</span></h3>
-            <div class="tmeta">Jan 2016 – Jan 2019 • United Kingdom</div>
-            <div class="tbadge">Teaching</div>
-          </div>
-
-          <div class="titem">
-            <h3>Consultant Neuro Anaesthetist <span class="tmeta">• University Hospitals of North Midlands NHS Trust • Full-time</span></h3>
-            <div class="tmeta">Nov 2013 – Apr 2021</div>
-            <p class="small" style="margin:10px 0 0">
-              Interests included Neuroanaesthesia, Spinal Surgery, Interventional Neuroradiology, Endovascular Treatment of Stroke, Orthopaedic Surgery.
-            </p>
-          </div>
-
-          <div class="titem">
-            <h3>Consultant Anaesthetist <span class="tmeta">• ROH, Birmingham, United Kingdom</span></h3>
-            <div class="tmeta">May 2013 – Nov 2013</div>
-            <p class="small" style="margin:10px 0 0">Complex spine surgery, arthroplasty</p>
-          </div>
-
-          <div class="titem">
-            <h3>Specialist Registrar (Anaesthetics) <span class="tmeta">• NHS</span></h3>
-            <div class="tmeta">Aug 2007 – May 2013</div>
-            <p class="small" style="margin:10px 0 0">Various hospitals in Oxford, North East, and West Midlands</p>
-          </div>
         </div>
       </div>
     </section>
 
-    <!-- INTERESTS -->
-    <section id="interests" class="grid">
-      <div class="card section-card col-12">
-        <h2>Clinical interests</h2>
-        <div class="tags">
-          <span class="tag emph">Neuroanaesthesia</span>
-          <span class="tag">Spinal surgery</span>
-          <span class="tag">Interventional neuroradiology</span>
-          <span class="tag">Endovascular treatment of stroke</span>
-          <span class="tag">Orthopaedic surgery</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- EDUCATION -->
     <section id="education" class="grid">
-      <div class="card section-card col-12">
-        <h2>Education</h2>
-        <div class="timeline">
-          <div class="titem">
-            <h3>FRCA <span class="tmeta">• Royal College of Anaesthetists, London</span></h3>
-            <div class="tmeta">Anaesthetics</div>
-          </div>
-          <div class="titem">
-            <h3>MBBS <span class="tmeta">• Bangalore University</span></h3>
-            <div class="tmeta">1994 – 1999</div>
-          </div>
-          <div class="titem">
-            <h3>FCARCSI <span class="tmeta">• College of Anaesthesiologists of Ireland</span></h3>
-            <div class="tmeta">Anaesthetics</div>
-          </div>
-          <div class="titem">
-            <h3>The Air Force School (TAFS), Subroto Park</h3>
-            <div class="tmeta">1991 – 1993</div>
+      <div class="card col-12">
+        <div class="card-inner">
+          <h2>Education</h2>
+          <div class="timeline">
+            <div class="titem">
+              <h3>FRCA <span class="tmeta">• Royal College of Anaesthetists, London</span></h3>
+              <div class="tmeta">Anaesthetics</div>
+            </div>
+            <div class="titem">
+              <h3>MBBS <span class="tmeta">• Bangalore University</span></h3>
+              <div class="tmeta">1994 – 1999</div>
+            </div>
+            <div class="titem">
+              <h3>FCARCSI <span class="tmeta">• College of Anaesthesiologists of Ireland</span></h3>
+              <div class="tmeta">Anaesthetics</div>
+            </div>
+            <div class="titem">
+              <h3>The Air Force School (TAFS), Subroto Park</h3>
+              <div class="tmeta">1991 – 1993</div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SKILLS -->
     <section id="skills" class="grid">
-      <div class="card section-card col-12">
-        <h2>Skills</h2>
-        <div class="tags" style="margin-top:10px">
-          <span class="tag emph">Healthcare leadership</span>
-          <span class="tag">Anaesthetics</span>
-          <span class="tag">ICU</span>
-          <span class="tag">Emergency medicine</span>
-          <span class="tag">Critical care</span>
-          <span class="tag">Airway management</span>
-          <span class="tag">Patient safety</span>
-          <span class="tag">Medical education</span>
-          <span class="tag">Healthcare consulting</span>
-          <span class="tag">Medical devices</span>
-          <span class="tag">Clinical simulation</span>
-          <span class="tag">Public health</span>
-          <span class="tag">Clinical research</span>
-          <span class="tag">Healthcare IT</span>
+      <div class="card col-12">
+        <div class="card-inner">
+          <h2>Skills</h2>
+          <div class="tags" aria-label="Skills">
+            <span class="tag emph">Healthcare leadership</span>
+            <span class="tag">Anaesthetics</span>
+            <span class="tag">ICU</span>
+            <span class="tag">Emergency medicine</span>
+            <span class="tag">Critical care</span>
+            <span class="tag">Airway management</span>
+            <span class="tag">Patient safety</span>
+            <span class="tag">Medical education</span>
+            <span class="tag">Healthcare consulting</span>
+            <span class="tag">Medical devices</span>
+            <span class="tag">Clinical simulation</span>
+            <span class="tag">Public health</span>
+            <span class="tag">Clinical research</span>
+            <span class="tag">Healthcare IT</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- CONTACT -->
     <section id="contact" class="grid">
-      <div class="card section-card col-12">
-        <h2>Contact</h2>
-
-        <div class="contact-card">
-          <div>
-            <div class="small">For professional enquiries</div>
-            <div class="email"><a href="mailto:contact@drmittal.co.uk">contact@drmittal.co.uk</a></div>
+      <div class="card col-12">
+        <div class="card-inner">
+          <h2>Contact</h2>
+          <div class="contact">
+            <div>
+              <div class="muted">For professional enquiries</div>
+              <a class="email" href="mailto:contact@drmittal.co.uk">contact@drmittal.co.uk</a>
+            </div>
+            <a class="btn" href="mailto:contact@drmittal.co.uk">Email</a>
           </div>
-          <a class="btn primary" href="mailto:contact@drmittal.co.uk">Email</a>
-        </div>
 
-        <div class="divider"></div>
-        <div class="small">
-          <b>Disclaimer:</b> This site provides general professional information only and does not constitute medical advice.
-          If you need urgent medical help, contact local emergency services.
+          <div class="divider"></div>
+          <div class="disclaimer">
+            <b>Disclaimer:</b> This site provides general professional information only and does not constitute medical advice.
+            If you need urgent medical help, contact local emergency services.
+          </div>
         </div>
       </div>
     </section>
@@ -583,6 +641,27 @@
 
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
+
+    const tabButtons = Array.from(document.querySelectorAll('.tab-btn'));
+    const panels = tabButtons.map(btn => document.getElementById(btn.getAttribute('aria-controls')));
+
+    function activateTab(btn){
+      tabButtons.forEach(b => b.setAttribute('aria-selected','false'));
+      panels.forEach(p => p.hidden = true);
+
+      btn.setAttribute('aria-selected','true');
+      const panel = document.getElementById(btn.getAttribute('aria-controls'));
+      panel.hidden = false;
+    }
+
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', () => activateTab(btn));
+      btn.addEventListener('keydown', (e) => {
+        const i = tabButtons.indexOf(btn);
+        if(e.key === 'ArrowRight'){ e.preventDefault(); activateTab(tabButtons[(i+1) % tabButtons.length]); tabButtons[(i+1) % tabButtons.length].focus(); }
+        if(e.key === 'ArrowLeft'){ e.preventDefault(); activateTab(tabButtons[(i-1 + tabButtons.length) % tabButtons.length]); tabButtons[(i-1 + tabButtons.length) % tabButtons.length].focus(); }
+      });
+    });
   </script>
 </body>
 </html>
