@@ -442,30 +442,6 @@
       });
     });
   </script>
-  // Tab functionality for specialist interests
-  const tabButtons = document.querySelectorAll('.tab-btn');
-  const tabPanels = document.querySelectorAll('.tab-panel');
-  
-  tabButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const panelId = button.getAttribute('aria-controls');
-      
-      // Hide all panels
-      tabPanels.forEach(panel => {
-        panel.setAttribute('hidden', '');
-        if (panel.id === panelId) {
-          panel.removeAttribute('hidden');
-        }
-      });
-      
-      // Update aria-selected for accessibility
-      tabButtons.forEach(btn => {
-        btn.setAttribute('aria-selected', 'false');
-      });
-      button.setAttribute('aria-selected', 'true');
-    });
-  });
-</script>
-</body>
+  </body>
 </html>
-
+  
