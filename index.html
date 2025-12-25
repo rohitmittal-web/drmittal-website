@@ -414,9 +414,10 @@
       wrap.innerHTML = '<div class="headshot-fallback">Headshot not found.<br/>Upload <b>SSP_216_2.jpeg</b> next to <b>index.html</b> (or inside <b>assets/</b>).</div>';
     });
 
-    // Specialist interest tabs
+// Specialist interest tabs - wrapped in DOMContentLoaded
+document.addEventListener('DOMContentLoaded', () => {
     const tabButtons = Array.from(document.querySelectorAll('.tab-btn'));
-    const panels = tabButtons.map(btn => document.getElementById(btn.getAttribute('aria-controls')));
+    const panels = tabButtons.map(btn => document.getElementById(btn.getAttribute('aria-controls')));.filter(p => p)
 
     function activateTab(btn){
       tabButtons.forEach(b => b.setAttribute('aria-selected','false'));
@@ -441,6 +442,7 @@
         }
       });
     });
+});
   </script>
   </body>
 </html>
